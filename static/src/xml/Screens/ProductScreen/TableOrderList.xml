@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="TableOrderList" owl="1">
+        <div class="partnerlist-screen screen">
+            <div class="screen-content">
+                <div class="top-content">
+                    <span class='button back' t-on-click="back">
+                        <i class='fa fa-angle-double-left'></i>
+                        Cancel
+                    </span>
+                </div>
+                <section class="full-content">
+                    <div class="partner-window">
+                        <section class="subwindow list">
+                            <div class="subwindow-container">
+                                <div class="subwindow-container-fix scrollable-y">
+                                    <table class="partner-list tableorders-list">
+                                        <tbody class='table_order_list_contents'>
+                                            <t t-foreach="tableorders" t-as="tos" t-key="tos.id">
+                                                <TableOrderLine tos="tos" tosindex="tos_index" />
+                                                <TableOrderPosLines tos="tos" tosindex="tos_index" />
+                                            </t>
+                                        </tbody>
+                                    </table>
+                                </div>
+                        </section>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </t>
+</templates>
