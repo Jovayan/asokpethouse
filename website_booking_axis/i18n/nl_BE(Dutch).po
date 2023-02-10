@@ -1,0 +1,1680 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_booking_axis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-15 05:25+0000\n"
+"PO-Revision-Date: 2022-04-15 05:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/models/calendar_appointment.py:0
+#, python-format
+msgid " (copy)"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "#{day['today_cls'] and 'Today' or ''}"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "$0.00"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "(timezone:"
+msgstr "(tijdzone:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "+1 (650) 691-3277"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+msgid "1. Select Your Location"
+msgstr "1. Selecteer uw locatie"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+msgid "2. Select Your Service"
+msgstr "2. Selecteer uw dienst"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+msgid "3. Select Your Provider"
+msgstr "3. Selecteer uw provider"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "4. Select Date &amp; Time"
+msgstr "4. Selecteer Datum &amp; Tijd"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "5. Confirm your details"
+msgstr "5. Bevestig je gegevens"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "<b> Address:</b>"
+msgstr "<b> Adres:</b>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid ""
+"<br/>\n"
+"                            It's too late to cancel online, please contact the attendees another way if you really can't make it."
+msgstr "<br/>\n Het is te laat om online te annuleren, neem dan op een andere manier contact op met de aanwezigen als je echt niet kunt komen."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+msgid "<i class=\"fa fa-align-center\"/>  Description:"
+msgstr "<i class=\"fa fa-align-center\"/> Beschrijving:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<small class=\"text-right\">Status:</small>"
+msgstr "<small class=\"text-right\">Status:</small>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "<small>APPOINT/</small>"
+msgstr "<small>AFSPRAAK/</small>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span> days</span>"
+msgstr "<span> dagen</span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span> hours before</span>"
+msgstr "<span> uur voor</span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span> hours</span>"
+msgstr "<span> uur</span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+msgid ""
+"<span><i class=\"fa fa-clock-o\"/>  Duration: </span>\n"
+"                                <span>30 Minutes</span>"
+msgstr "<span><i class=\"fa fa-clock-o\"/> Duur: </span>\n  <span>30 minuten</span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+msgid "<span><i class=\"fa fa-money\"/>  Appointment Charge: </span>"
+msgstr "<span><i class=\"fa fa-money\"/> Afspraakkosten: </span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+msgid "<span><i class=\"fa fa-suitcase\"/>  Work Experience: </span>"
+msgstr "<span><i class=\"fa fa-suitcase\"/> Werkervaring: </span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "<span>Sub Total</span>"
+msgstr "<span>Subtotaal</span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span>and not after </span>"
+msgstr "<span>en niet na </span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span>at least </span>"
+msgstr "<span>minstens </span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span>until </span>"
+msgstr "<span>tot </span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Appointment Charge</strong>"
+msgstr "<strong class=\"col-lg-2\">Afspraakkosten</strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Appointment For</strong>"
+msgstr "<strong class=\"col-lg-2\">Afspraak voor</strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Appointment Time</strong>"
+msgstr "<strong class=\"col-lg-2\">Afspraaktijd</strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Appointment With</strong>"
+msgstr "<strong class=\"col-lg-2\">Afspraak met</strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Date of Appointment</strong>"
+msgstr "<strong class=\"col-lg-2\">Benoemingsdatum</strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "<strong>Your appointment has been successfully booked!</strong>"
+msgstr "<strong>Uw afspraak is succesvol geboekt!</strong>"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__access_token
+msgid "Access Token"
+msgstr "Toegangstoken"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_needaction
+msgid "Action Needed"
+msgstr "Actie nodig"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__address_id
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Address"
+msgstr "Adres"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.all_appointments
+msgid "All Appointments"
+msgstr "Alle afspraken"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Allow Cancelling"
+msgstr "Annuleren toestaan"
+
+#. module: website_booking_axis
+#: model_terms:ir.actions.act_window,help:website_booking_axis.calendar_appointment_type_action
+msgid ""
+"Allow your customers to book an appointment on your website\n"
+"                by creating appointment types here."
+msgstr "Laat uw klanten een afspraak boeken op uw website\n  door hier afspraaktypes aan te maken."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__name
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_answer_view_form
+msgid "Answer"
+msgstr "Antwoord"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Apply"
+msgstr "Toepassen"
+
+#. module: website_booking_axis
+#: model_terms:ir.actions.act_window,help:website_booking_axis.action_appointment_source_n
+msgid "Appoinment Source"
+msgstr "Afspraakbron"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__appoint_product_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__appoint_product_id
+msgid "Appointee Product"
+msgstr "Aangewezen product"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__appoint_person_id
+#: model:ir.ui.menu,name:website_booking_axis.appointees
+msgid "Appointees"
+msgstr "aangestelden"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.appointees_group
+msgid "Appointees Group"
+msgstr "Aangewezen groep"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.appointment_timeslot
+msgid "Appointees TimeSlot"
+msgstr "Aangewezen TimeSlot"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model:ir.ui.menu,name:website_booking_axis.appointment_booking
+#: model:ir.ui.menu,name:website_booking_axis.appointment_menu
+#: model:website.menu,name:website_booking_axis.menu_appointment
+#, python-format
+msgid "Appointment"
+msgstr "Afspraak"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__appointment_charge
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__appointment_charge
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__appointment_charge
+msgid "Appointment Charge"
+msgstr "Afspraak kosten"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Appointment Confirmation"
+msgstr "Afspraak bevestiging"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model:ir.actions.client,name:website_booking_axis.appointment_dashboard_action
+#: model:ir.ui.menu,name:website_booking_axis.appointment_dashboard_menu
+#, python-format
+msgid "Appointment Dashboard"
+msgstr "Afspraakdashboard"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__appoint_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__start_datetime
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__start_datetime
+msgid "Appointment Date"
+msgstr "Afspraakdatum:"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__appointment_duration
+msgid "Appointment Duration"
+msgstr "Duur van de afspraak"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: model:ir.actions.act_window,name:website_booking_axis.action_appointment_group
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__appointment_group_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__appointment_group_ids
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__appointment_group_ids
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__appointment_group_ids
+#: model_terms:ir.actions.act_window,help:website_booking_axis.action_appointment_group
+#, python-format
+msgid "Appointment Group"
+msgstr "Afspraakgroep"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "Appointment Id"
+msgstr "Afspraak-ID"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Appointment Introduction"
+msgstr "Afspraak introductie"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointmet_source_tree
+msgid "Appointment Person Source Tree"
+msgstr "Afspraak Persoon Bron Boom"
+
+#. module: website_booking_axis
+#: model:ir.actions.act_window,name:website_booking_axis.action_appointment_source_n
+msgid "Appointment Source"
+msgstr "Afspraakbron"
+
+#. module: website_booking_axis
+#: model:ir.actions.act_window,name:website_booking_axis.action_appointment_timeslot
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointment_time_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointmet_time_tree
+msgid "Appointment TimeSlot"
+msgstr "Afspraak Tijdslot"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__appointment_type_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__appointment_type_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__name
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__appointment_type
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__appointment_type
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_tree
+msgid "Appointment Type"
+msgstr "Afspraaktype:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "Appointment With"
+msgstr "Afspraak met"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Appointment:"
+msgstr "Afspraak:"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_my_home_menu_helpdesk
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointmet_tree
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointment_group_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointmet_group_tree
+#, python-format
+msgid "Appointments"
+msgstr "Afspraken"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_calendar_event_search
+msgid "Approved Appointment"
+msgstr "Goedgekeurde afspraak"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__assignation_method
+msgid "Assignation Method"
+msgstr "Toewijzingsmethode:"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "Aantal bijlagen"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.abcd
+msgid "Attendees"
+msgstr "deelnemers"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Attendees:"
+msgstr "deelnemers:"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__slot_ids
+msgid "Availabilities"
+msgstr "Beschikbaarheden"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__answer_ids
+msgid "Available Answers"
+msgstr "Beschikbare antwoorden"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Available Employees"
+msgstr "Beschikbare medewerkers"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Avatar"
+msgstr "Avatar"
+
+#. module: website_booking_axis
+#: model_terms:ir.actions.act_window,help:website_booking_axis.action_new_appointment
+msgid "Book Appointment"
+msgstr "Afspraak maken"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.calendar_appointment_type_menu_action
+msgid "Calendar"
+msgstr "Kalender"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_event
+msgid "Calendar Event"
+msgstr "Agenda gebeurtenis"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__can_publish
+msgid "Can Publish"
+msgstr "Kan publiceren"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__min_cancellation_hours
+msgid "Cancel Before (hours)"
+msgstr "Annuleren Voor (uren)"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "Charge"
+msgstr "Aanval"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointment_form
+msgid "Charges"
+msgstr "kosten"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__checkbox
+msgid "Checkboxes (multiple answers)"
+msgstr "Selectievakjes (meerdere antwoorden)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_type__assignation_method__chosen
+msgid "Chosen by the Customer"
+msgstr "Gekozen door de klant"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "City"
+msgstr "Stad"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+#, python-format
+msgid "Complete"
+msgstr "Compleet"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.configuration
+msgid "Configuration"
+msgstr "Configuratie"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_confirmation
+msgid "Confirmation Message"
+msgstr "Bevestigingsbericht"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_res_partner
+msgid "Contact"
+msgstr "Contact"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointment_form
+msgid "Contact & Address"
+msgstr "Contact adres"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Contact / Address"
+msgstr "Contact adres"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Contact Name"
+msgstr "contactnaam"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Contacts & Addresses"
+msgstr "Contacten & adressen"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__country_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__country_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__country_id
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Country"
+msgstr "Land"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__create_date
+msgid "Create Date"
+msgstr "Datum aanmaken"
+
+#. module: website_booking_axis
+#: model_terms:ir.actions.act_window,help:website_booking_axis.calendar_appointment_type_action
+msgid "Create a new appointment type"
+msgstr "Een nieuw afspraaktype maken"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__create_uid
+msgid "Created by"
+msgstr "Gemaakt door"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__create_date
+msgid "Created on"
+msgstr "Gemaakt op"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__customer
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__partner_id
+msgid "Customer"
+msgstr "Klant"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "Date"
+msgstr "Datum"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Date &amp; Time"
+msgstr "Datum & Tijd"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__day
+msgid "Day"
+msgstr "Dag"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Delivery"
+msgstr "Levering"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__description
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__description
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_product__description
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template__description
+msgid "Description"
+msgstr "Omschrijving"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Description:"
+msgstr "Beschrijving:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Details"
+msgstr "Details"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Schermnaam"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__select
+msgid "Dropdown (one answer)"
+msgstr "Dropdown (één antwoord)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_product__duration
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template__duration
+msgid "Duration"
+msgstr "Duur"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Duration:"
+msgstr "Duur:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_kanban
+msgid "Edit"
+msgstr "Bewerk"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__email_id
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Email"
+msgstr "E-mail"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "End Appointment (0:00 - 24:00)"
+msgstr "Afspraak beëindigen (0:00 - 24:00)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__end_date
+msgid "End Date"
+msgstr "Einddatum"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__end_time
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__end_time
+msgid "End Time"
+msgstr "Eindtijd"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "First Name"
+msgstr "Voornaam"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_follower_ids
+msgid "Followers"
+msgstr "Volgers"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "Volgers (kanalen)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "Volgers (Partners)"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Fri"
+msgstr "vrij"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__friday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__5
+msgid "Friday"
+msgstr "Vrijdag"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#, python-format
+msgid "Fully  Invoiced"
+msgstr "Volledig gefactureerd"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "General Information"
+msgstr "Algemene informatie"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointment_group_form
+msgid "Group Members"
+msgstr "Groepsleden"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__name
+msgid "Group Name"
+msgstr "Groepsnaam"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__product_template_id
+msgid "Group Product"
+msgstr "Groepsproduct"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Have a Promocode?"
+msgstr "Heb je een promocode?"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__assignation_method
+msgid ""
+"How employees will be assigned to meetings customers book on your website."
+msgstr "Hoe medewerkers worden toegewezen aan vergaderingen die klanten boeken op uw website."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_sale_order__id
+msgid "ID"
+msgstr "ID kaart"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_needaction
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "Indien aangevinkt, vragen nieuwe berichten uw aandacht."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_has_error
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "Indien aangevinkt, hebben sommige berichten een bezorgfout."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Internal notes..."
+msgstr "Interne opmerkingen..."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_intro
+msgid "Introduction Message"
+msgstr "Introductiebericht:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Invoice"
+msgstr "Factuur"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_is_follower
+msgid "Is Follower"
+msgstr "Is volger"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__is_published
+msgid "Is Published"
+msgstr "Is gepubliceerd"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__country_ids
+msgid ""
+"Keep empty to allow visitors from any country, otherwise you only allow "
+"visitors from selected countries"
+msgstr "Houd leeg om bezoekers uit elk land toe te laten, anders staat u alleen bezoekers uit geselecteerde landen"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Last Name"
+msgstr "Achternaam"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__write_date
+msgid "Last Updated on"
+msgstr "Laatst geupdate op"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__last_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__last_name
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Last name"
+msgstr "Achternaam"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__location
+msgid "Location"
+msgstr "Plaats"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__location
+msgid "Location of the appointments"
+msgstr "Locatie van de afspraken"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Location:"
+msgstr "Plaats:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Locations"
+msgstr "Locaties"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Logo"
+msgstr "Logo"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "Hoofdbijlage"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#, python-format
+msgid "Meetings"
+msgstr "Vergaderingen"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_has_error
+msgid "Message Delivery error"
+msgstr "Fout bij bezorging van bericht"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_ids
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Messages"
+msgstr "Berichten"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Misc"
+msgstr "Diversen"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__mobile_number
+msgid "Mobile Number"
+msgstr "Mobiel nummer"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Mobile:"
+msgstr "mobiel:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Mon"
+msgstr "maandag"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__monday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__1
+msgid "Monday"
+msgstr "Maandag"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Monthly Appointments"
+msgstr "Maandelijkse afspraken"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__text
+msgid "Multi-line text"
+msgstr "Tekst met meerdere regels"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__name
+msgid "Name"
+msgstr "Naam"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.new_appointment
+msgid "New Appointment"
+msgstr "Nieuwe afspraak"
+
+#. module: website_booking_axis
+#: model:ir.actions.act_window,name:website_booking_axis.action_new_appointment
+msgid "New Appointment Book"
+msgstr "Nieuw afsprakenboek"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Newest"
+msgstr "Nieuwste"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "No Appointments Found!!!"
+msgstr "Geen afspraken gevonden!!!"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot_available
+msgid "No Slots Available For this Appointees"
+msgstr "Geen slots beschikbaar voor deze aangestelden"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "Aantal acties"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "Aantal fouten"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "Aantal berichten waarvoor een actie vereist is"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "Aantal berichten met bezorgfout"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "Aantal ongelezen berichten"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__appointment_type_id
+msgid "Online Appointment"
+msgstr "Online Afspraak"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_appointment_answer
+msgid "Online Appointment : Answers"
+msgstr "Online Afspraak : Antwoorden"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_appointment_question
+msgid "Online Appointment : Questions"
+msgstr "Online Afspraak : Vragen"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_appointment_slot
+msgid "Online Appointment : Time Slot"
+msgstr "Online Afspraak : Tijdslot"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_appointment_type
+msgid "Online Appointment Type"
+msgstr "Type online afspraak"
+
+#. module: website_booking_axis
+#: model:ir.actions.act_window,name:website_booking_axis.calendar_appointment_type_action
+#: model:ir.ui.menu,name:website_booking_axis.appointment_type_menu
+#: model:ir.ui.menu,name:website_booking_axis.website_appointment_type_menu
+msgid "Online Appointments"
+msgstr "Online afspraken"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointment_form
+msgid "Other Info"
+msgstr "Andere informatie"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__partner_new
+msgid "Partner New"
+msgstr "Partner Nieuw"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Patients"
+msgstr "Patiënten"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Pending"
+msgstr "In afwachting"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_calendar_event_search
+msgid "Pending Appointment"
+msgstr "Afspraak in behandeling"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Phone:"
+msgstr "Telefoon:"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__placeholder
+msgid "Placeholder"
+msgstr "Tijdelijke aanduiding"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/models/calendar_appointment.py:0
+#, python-format
+msgid "Please enter a valid hour between 0:00 to 24:00 for your slots."
+msgstr "Voer een geldig uur in tussen 0:00 en 24:00 voor uw slots."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__price_unit
+msgid "Price Unit"
+msgstr "Prijseenheid"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__pricelist_id
+msgid "Pricelist"
+msgstr "Prijslijst"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__product_id
+msgid "Product"
+msgstr "Product"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_product_template
+msgid "Product Template"
+msgstr "Productsjabloon"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Provider"
+msgstr "Aanbieder"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Purchase"
+msgstr "Aankoop"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__name
+msgid "Question"
+msgstr "Vraag"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__question_type
+msgid "Question Type"
+msgstr "Question Type"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__question_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__question_ids
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Questions"
+msgstr "Vragen"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__radio
+msgid "Radio (one answer)"
+msgstr "Radio (één antwoord)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_type__assignation_method__random
+msgid "Random"
+msgstr "Willekeurig"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Reference"
+msgstr "Verwijzing"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_calendar_event_search
+msgid "Rejected Appointment"
+msgstr "Afgewezen afspraak"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__reminder_ids
+msgid "Reminders"
+msgstr "Herinneringen"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__question_required
+msgid "Required Answer"
+msgstr "Vereist antwoord"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__country_ids
+msgid "Restrict Countries"
+msgstr "Landen beperken"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_kanban
+msgid "SCHEDULED"
+msgstr "GEPLAND"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__is_seo_optimized
+msgid "SEO optimized"
+msgstr "SEO geoptimaliseerd"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "Fout bij sms-bezorging"
+
+#. module: website_booking_axis
+#: model:calendar.alarm,name:website_booking_axis.calendar_alarm_data_1h_sms
+msgid "SMS Text Message - 1 Hours"
+msgstr "SMS-bericht - 1 uur"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Sales"
+msgstr "verkoop"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Sales & Purchase"
+msgstr "Verkoop & Inkoop"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_sale_order
+msgid "Sales Order"
+msgstr "Verkooporder"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Salesperson"
+msgstr "Verkoper"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Sat"
+msgstr "Za"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__saturday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__6
+msgid "Saturday"
+msgstr "zaterdag"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Schedule Appointment"
+msgstr "Afspraak plannen"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__min_schedule_hours
+msgid "Schedule before (hours)"
+msgstr "Schema voor (uren)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__max_schedule_days
+msgid "Schedule not after (days)"
+msgstr "Schema niet na (dagen)"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Scheduling & Availability"
+msgstr "Planning & Beschikbaarheid"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search <span class=\"nolabel\"> (in Content)</span>"
+msgstr "Zoek <span class=\"nolabel\"> (in Inhoud)</span>"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search ID"
+msgstr "Zoek-ID"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search in All"
+msgstr "Zoeken in Alles"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search in Customer"
+msgstr "Zoeken in Klant"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search in Messages"
+msgstr "Zoeken in Berichten"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+msgid "Select"
+msgstr "Selecteer"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__seo_name
+msgid "Seo name"
+msgstr "Seo-naam"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__sequence
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__sequence
+msgid "Sequence"
+msgstr "Volgorde"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+#, python-format
+msgid "Services"
+msgstr "Diensten"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__char
+msgid "Single line text"
+msgstr "Enkele regel tekst"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__slot_ids
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__slot_ids
+msgid "Slot"
+msgstr "Sleuf"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Slots"
+msgstr "Slots"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__source
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__name
+msgid "Source"
+msgstr "Bron"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__specialist
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__specialist
+msgid "Specialist"
+msgstr "Specialist"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__start_at
+msgid "Start At"
+msgstr "Begin bij"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__start_time
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__start_time
+msgid "Start Time"
+msgstr "Starttijd"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Starting Appointment (0:00 - 24:00)"
+msgstr "Startafspraak (0:00 - 24:00)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__hour
+msgid "Starting Hour"
+msgstr "Startuur"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__state_id
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "State"
+msgstr "Staat"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Street 2..."
+msgstr "Straat # 2..."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Street..."
+msgstr "Straat..."
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Subject"
+msgstr "Onderwerp"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Submit"
+msgstr "Indienen"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__price_subtotal
+msgid "Subtotal"
+msgstr "Subtotaal"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Sun"
+msgstr "Zon"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__sunday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__7
+msgid "Sunday"
+msgstr "Zondag"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__tax_id
+msgid "Tax"
+msgstr "Belasting"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__website_url
+msgid "The full URL to access the document through the website."
+msgstr "De volledige URL voor toegang tot het document via de website."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "There are currently no Appointments for your account."
+msgstr "Er zijn momenteel geen afspraken voor uw account."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Thu"
+msgstr "do"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__thursday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__4
+msgid "Thursday"
+msgstr "Donderdag"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__time_slot
+#: model_terms:ir.actions.act_window,help:website_booking_axis.action_appointment_timeslot
+msgid "Time Slot"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "TimeSlot"
+msgstr "Tijdslot"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Timeslots"
+msgstr "Tijdsloten"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__appointment_tz
+msgid "Timezone"
+msgstr "Tijdzone"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__appointment_tz
+msgid "Timezone where appointment take place"
+msgstr "Tijdzone waar de afspraak plaatsvindt"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__title
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__title
+msgid "Title"
+msgstr "Titel"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#, python-format
+msgid "To be Invoiced"
+msgstr "Gefactureerd worden"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Today"
+msgstr "Vandaag"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_calendar_event_search
+msgid "Today Appointment"
+msgstr "Afspraak vandaag"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Total"
+msgstr "Totaal"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Total Amount"
+msgstr "Totaalbedrag"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Tue"
+msgstr "di"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__tuesday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__2
+msgid "Tuesday"
+msgstr "Dinsdag"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_unread
+msgid "Unread Messages"
+msgstr "ongelezen berichten"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "Teller ongelezen berichten"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_published
+msgid "Visible on current website"
+msgstr "Zichtbaar op huidige website"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_message_ids
+msgid "Website Messages"
+msgstr "Website-berichten"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_url
+msgid "Website URL"
+msgstr "Website URL"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__website_message_ids
+msgid "Website communication history"
+msgstr "Geschiedenis van websitecommunicatie"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_meta_description
+msgid "Website meta description"
+msgstr "Metabeschrijving van de website"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_meta_keywords
+msgid "Website meta keywords"
+msgstr "Website meta-trefwoorden"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_meta_title
+msgid "Website meta title"
+msgstr "Metatitel van de website"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_meta_og_img
+msgid "Website opengraph image"
+msgstr "Website opengraph afbeelding"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Wed"
+msgstr "wo"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__wednesday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__3
+msgid "Wednesday"
+msgstr "Woensdag"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__weekday
+msgid "Week Day"
+msgstr "weekdag"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Weekly Appointments"
+msgstr "Wekelijkse afspraken"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "When:"
+msgstr "Wanneer:"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__work_exp
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__work_exp
+msgid "Work Experience"
+msgstr "Werkervaring"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Appointments"
+msgstr "Uw afspraken"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Country"
+msgstr "Jouw land"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Email"
+msgstr "Jouw email"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Message"
+msgstr "Jouw bericht"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Phone"
+msgstr "Jouw telefoon"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Your appointment is in less than"
+msgstr "Uw afspraak is over minder dan"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "ZIP"
+msgstr "ZIP"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_appointment
+msgid "appointment"
+msgstr "afspraak"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_appointment_group
+msgid "appointment.group"
+msgstr ""
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_appointment_source
+msgid "appointment_source"
+msgstr ""
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_appointment_timeslot
+msgid "appointment_timeslot"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "e.g. 1-2 years"
+msgstr "bijv. 1-2 jaar"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "e.g. Mr."
+msgstr "bijv. Dhr."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "e.g. Sales Director"
+msgstr "bijv. Verkoopdirecteur"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "e.g. Schedule a demo"
+msgstr "bijv. Plan een demo"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "hour"
+msgstr "uur"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "hours from now!"
+msgstr "uur vanaf nu!"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "with"
+msgstr "met"

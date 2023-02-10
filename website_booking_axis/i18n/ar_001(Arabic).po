@@ -1,0 +1,1680 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* website_booking_axis
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-04-15 05:24+0000\n"
+"PO-Revision-Date: 2022-04-15 05:24+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/models/calendar_appointment.py:0
+#, python-format
+msgid " (copy)"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "#{day['today_cls'] and 'Today' or ''}"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "$0.00"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "(timezone:"
+msgstr "(وحدة زمنية:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "+1 (650) 691-3277"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+msgid "1. Select Your Location"
+msgstr "1. حدد موقعك"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+msgid "2. Select Your Service"
+msgstr "2. حدد خدمتك"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+msgid "3. Select Your Provider"
+msgstr "3. حدد المزود الخاص بك"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "4. Select Date &amp; Time"
+msgstr "4. حدد التاريخ & amp؛ وقت"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "5. Confirm your details"
+msgstr "5. قم بتأكيد التفاصيل الخاصة بك"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "<b> Address:</b>"
+msgstr "<b> العنوان: </ b>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid ""
+"<br/>\n"
+"                            It's too late to cancel online, please contact the attendees another way if you really can't make it."
+msgstr "<br/> \ n لقد فات الأوان للإلغاء عبر الإنترنت ، يرجى الاتصال بالحضور بطريقة أخرى إذا كنت لا تستطيع فعل ذلك."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+msgid "<i class=\"fa fa-align-center\"/>  Description:"
+msgstr "<i class=\"fa fa-align-center\"/>  وصف:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_kanban
+msgid "<i class=\"fa fa-ellipsis-v\" role=\"img\" aria-label=\"Manage\" title=\"Manage\"/>"
+msgstr ""
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<small class=\"text-right\">Status:</small>"
+msgstr "<small class=\"text-right\">حالة:</small>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "<small>APPOINT/</small>"
+msgstr "<small>موعد/</small>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span> days</span>"
+msgstr "<span> أيام</span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span> hours before</span>"
+msgstr "<span> ساعة قبل </ span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span> hours</span>"
+msgstr "<span> ساعة </ span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+msgid ""
+"<span><i class=\"fa fa-clock-o\"/>  Duration: </span>\n"
+"                                <span>30 Minutes</span>"
+msgstr "<span> <i class = \ "fa fa-clock-o \" /> المدة: </ span> \ n <span> 30 دقيقة </ span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+msgid "<span><i class=\"fa fa-money\"/>  Appointment Charge: </span>"
+msgstr "<span><i class=\"fa fa-money\"/>  رسوم الموعد: </span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+msgid "<span><i class=\"fa fa-suitcase\"/>  Work Experience: </span>"
+msgstr "<span><i class=\"fa fa-suitcase\"/>  خبرة في العمل: </span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "<span>Sub Total</span>"
+msgstr "<span>المجموع الفرعي</span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span>and not after </span>"
+msgstr "<span>وليس بعد </span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span>at least </span>"
+msgstr "<span> على الأقل </ span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "<span>until </span>"
+msgstr "<span> حتى </ span>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Appointment Charge</strong>"
+msgstr "<strong class=\"col-lg-2\">رسوم التعيين</strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Appointment For</strong>"
+msgstr "<strong class=\"col-lg-2\">موعد ل</strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Appointment Time</strong>"
+msgstr "<strong class = \ "col-lg-2 \"> وقت الموعد </ strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Appointment With</strong>"
+msgstr "<strong class = \ "col-lg-2 \"> موعد مع </ strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointments_followup
+msgid "<strong class=\"col-lg-2\">Date of Appointment</strong>"
+msgstr "<strong class = \ "col-lg-2 \"> تاريخ التعيين </ strong>"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "<strong>Your appointment has been successfully booked!</strong>"
+msgstr "<strong> تم حجز موعدك بنجاح! </ strong>"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__access_token
+msgid "Access Token"
+msgstr "رمز وصول"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_needaction
+msgid "Action Needed"
+msgstr "الإجراءات اللازمة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__address_id
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Address"
+msgstr "عنوان"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.all_appointments
+msgid "All Appointments"
+msgstr "جميع المواعيد"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Allow Cancelling"
+msgstr "السماح بالإلغاء"
+
+#. module: website_booking_axis
+#: model_terms:ir.actions.act_window,help:website_booking_axis.calendar_appointment_type_action
+msgid ""
+"Allow your customers to book an appointment on your website\n"
+"                by creating appointment types here."
+msgstr "اسمح لعملائك بحجز موعد على موقع الويب الخاص بك \ n من خلال إنشاء أنواع المواعيد هنا."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__name
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_answer_view_form
+msgid "Answer"
+msgstr "إجابه"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Apply"
+msgstr "يتقدم"
+
+#. module: website_booking_axis
+#: model_terms:ir.actions.act_window,help:website_booking_axis.action_appointment_source_n
+msgid "Appoinment Source"
+msgstr "مصدر الموعد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__appoint_product_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__appoint_product_id
+msgid "Appointee Product"
+msgstr "منتج معين"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__appoint_person_id
+#: model:ir.ui.menu,name:website_booking_axis.appointees
+msgid "Appointees"
+msgstr "المعينون"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.appointees_group
+msgid "Appointees Group"
+msgstr "مجموعة المعيّنين"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.appointment_timeslot
+msgid "Appointees TimeSlot"
+msgstr "وقت التعيين"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model:ir.ui.menu,name:website_booking_axis.appointment_booking
+#: model:ir.ui.menu,name:website_booking_axis.appointment_menu
+#: model:website.menu,name:website_booking_axis.menu_appointment
+#, python-format
+msgid "Appointment"
+msgstr "ميعاد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__appointment_charge
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__appointment_charge
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__appointment_charge
+msgid "Appointment Charge"
+msgstr "رسوم التعيين"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Appointment Confirmation"
+msgstr "تأكيد الموعد"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model:ir.actions.client,name:website_booking_axis.appointment_dashboard_action
+#: model:ir.ui.menu,name:website_booking_axis.appointment_dashboard_menu
+#, python-format
+msgid "Appointment Dashboard"
+msgstr "لوحة المواعيد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__appoint_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__start_datetime
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__start_datetime
+msgid "Appointment Date"
+msgstr "تاريخ الموعد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__appointment_duration
+msgid "Appointment Duration"
+msgstr "مدة التعيين"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: model:ir.actions.act_window,name:website_booking_axis.action_appointment_group
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__appointment_group_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__appointment_group_ids
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__appointment_group_ids
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__appointment_group_ids
+#: model_terms:ir.actions.act_window,help:website_booking_axis.action_appointment_group
+#, python-format
+msgid "Appointment Group"
+msgstr "مجموعة المواعيد"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "Appointment Id"
+msgstr "معرف الموعد"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Appointment Introduction"
+msgstr "مقدمة التعيين"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointmet_source_tree
+msgid "Appointment Person Source Tree"
+msgstr "شجرة مصدر الشخص التعيين"
+
+#. module: website_booking_axis
+#: model:ir.actions.act_window,name:website_booking_axis.action_appointment_source_n
+msgid "Appointment Source"
+msgstr "مصدر الموعد"
+
+#. module: website_booking_axis
+#: model:ir.actions.act_window,name:website_booking_axis.action_appointment_timeslot
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointment_time_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointmet_time_tree
+msgid "Appointment TimeSlot"
+msgstr "موعد الموعد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__appointment_type_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__appointment_type_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__name
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__appointment_type
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__appointment_type
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_tree
+msgid "Appointment Type"
+msgstr "نوع الموعد"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "Appointment With"
+msgstr "موعد مع"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Appointment:"
+msgstr "ميعاد:"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_my_home_menu_helpdesk
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointmet_tree
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointment_group_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointmet_group_tree
+#, python-format
+msgid "Appointments"
+msgstr "تعيينات"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_calendar_event_search
+msgid "Approved Appointment"
+msgstr "موعد معتمد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__assignation_method
+msgid "Assignation Method"
+msgstr "طريقة التخصيص"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.abcd
+msgid "Attendees"
+msgstr "الحاضرين"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Attendees:"
+msgstr "الحاضرين:"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__slot_ids
+msgid "Availabilities"
+msgstr "التوفر"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__answer_ids
+msgid "Available Answers"
+msgstr "الإجابات المتاحة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Available Employees"
+msgstr "الموظفين المتاحين"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Avatar"
+msgstr "الصورة الرمزية"
+
+#. module: website_booking_axis
+#: model_terms:ir.actions.act_window,help:website_booking_axis.action_new_appointment
+msgid "Book Appointment"
+msgstr "موعد الكتاب"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.calendar_appointment_type_menu_action
+msgid "Calendar"
+msgstr "تقويم"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_event
+msgid "Calendar Event"
+msgstr "حدث التقويم"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__can_publish
+msgid "Can Publish"
+msgstr "يمكن أن تنشر"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__min_cancellation_hours
+msgid "Cancel Before (hours)"
+msgstr "إلغاء قبل (ساعات)"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "Charge"
+msgstr "الشحنة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointment_form
+msgid "Charges"
+msgstr "شحنة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__checkbox
+msgid "Checkboxes (multiple answers)"
+msgstr "مربعات الاختيار (إجابات متعددة)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_type__assignation_method__chosen
+msgid "Chosen by the Customer"
+msgstr "يختاره العميل"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "City"
+msgstr "مدينة"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+#, python-format
+msgid "Complete"
+msgstr "إكمال"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.configuration
+msgid "Configuration"
+msgstr "إعدادات"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_confirmation
+msgid "Confirmation Message"
+msgstr "رسالة تأكيد"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointment_form
+msgid "Contact & Address"
+msgstr "عنوان الإتصال"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Contact / Address"
+msgstr "عنوان الإتصال"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Contact Name"
+msgstr "اسم جهة الاتصال"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Contacts & Addresses"
+msgstr "جهات الاتصال والعناوين"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__country_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__country_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__country_id
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Country"
+msgstr "الدولة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__create_date
+msgid "Create Date"
+msgstr "تاريخ الإنشاء"
+
+#. module: website_booking_axis
+#: model_terms:ir.actions.act_window,help:website_booking_axis.calendar_appointment_type_action
+msgid "Create a new appointment type"
+msgstr "قم بإنشاء نوع موعد جديد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__create_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__create_uid
+msgid "Created by"
+msgstr "انشأ من قبل"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__create_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__create_date
+msgid "Created on"
+msgstr "تم إنشاؤها على"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__customer
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__partner_id
+msgid "Customer"
+msgstr "عميل"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "Date"
+msgstr "تاريخ"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Date &amp; Time"
+msgstr "التاريخ وأمبير. وقت"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__day
+msgid "Day"
+msgstr "يوم"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Delivery"
+msgstr "توصيل"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__description
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__description
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_product__description
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Description:"
+msgstr "وصف:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Details"
+msgstr "تفاصيل"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__display_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_sale_order__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__select
+msgid "Dropdown (one answer)"
+msgstr "قائمة منسدلة (إجابة واحدة)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_product__duration
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template__duration
+msgid "Duration"
+msgstr "مدة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Duration:"
+msgstr "مدة:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_kanban
+msgid "Edit"
+msgstr "تعديل"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__email_id
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Email"
+msgstr "بريد الالكتروني"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "End Appointment (0:00 - 24:00)"
+msgstr "موعد الانتهاء (0:00 - 24:00)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__end_time
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__end_time
+msgid "End Time"
+msgstr "وقت النهاية"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "First Name"
+msgstr "الاسم الأول"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_follower_ids
+msgid "Followers"
+msgstr "متابعون"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Fri"
+msgstr "الجمعة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__friday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__5
+msgid "Friday"
+msgstr "جمعة"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#, python-format
+msgid "Fully  Invoiced"
+msgstr "مفوتر بالكامل"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "General Information"
+msgstr "معلومات عامة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_appointment_group_form
+msgid "Group Members"
+msgstr "أعضاء المجموعة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__name
+msgid "Group Name"
+msgstr "أسم المجموعة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__product_template_id
+msgid "Group Product"
+msgstr "المنتج الجماعي"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Have a Promocode?"
+msgstr "هل يمتلك الرمز الترويجي؟"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__assignation_method
+msgid ""
+"How employees will be assigned to meetings customers book on your website."
+msgstr "كيف سيتم تعيين الموظفين للاجتماعات التي يحجزها العملاء على موقع الويب الخاص بك."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__id
+#: model:ir.model.fields,field_description:website_booking_axis.field_sale_order__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_needaction
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديدها ، فستتطلب الرسائل الجديدة انتباهك "."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_has_error
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Internal notes..."
+msgstr "ملاحظات داخلية ..."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_intro
+msgid "Introduction Message"
+msgstr "رسالة مقدمة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_is_follower
+msgid "Is Follower"
+msgstr "تابع"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__is_published
+msgid "Is Published"
+msgstr "يتم نشر"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__country_ids
+msgid ""
+"Keep empty to allow visitors from any country, otherwise you only allow "
+"visitors from selected countries"
+msgstr "احتفظ به فارغًا للسماح للزوار من أي بلد ، وإلا فإنك تسمح فقط الزوار من بلدان مختارة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_product_template____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner____last_update
+#: model:ir.model.fields,field_description:website_booking_axis.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Last Name"
+msgstr "الكنية"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__write_uid
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__write_date
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__last_name
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__last_name
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Last name"
+msgstr "الكنية"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__location
+msgid "Location"
+msgstr "موقع"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__location
+msgid "Location of the appointments"
+msgstr "موقع المواعيد"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Location:"
+msgstr "موقع:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Locations"
+msgstr "المواقع"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Logo"
+msgstr "شعار"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#, python-format
+msgid "Meetings"
+msgstr "الاجتماعات"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_ids
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Messages"
+msgstr "رسائل"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Misc"
+msgstr "متفرقات"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__mobile_number
+msgid "Mobile Number"
+msgstr "رقم الهاتف المحمول"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Mobile:"
+msgstr "التليفون المحمول:"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Mon"
+msgstr "الإثنين"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__monday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__1
+msgid "Monday"
+msgstr "الاثنين"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Monthly Appointments"
+msgstr "المواعيد الشهرية"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__text
+msgid "Multi-line text"
+msgstr "نص متعدد الأسطر"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__name
+msgid "Name"
+msgstr "اسم"
+
+#. module: website_booking_axis
+#: model:ir.ui.menu,name:website_booking_axis.new_appointment
+msgid "New Appointment"
+msgstr "موعد جديد"
+
+#. module: website_booking_axis
+#: model:ir.actions.act_window,name:website_booking_axis.action_new_appointment
+msgid "New Appointment Book"
+msgstr "كتاب موعد جديد"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Newest"
+msgstr "الأحدث"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "No Appointments Found!!!"
+msgstr "لم يتم العثور على مواعيد !!!"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot_available
+msgid "No Slots Available For this Appointees"
+msgstr "لا توجد فترات زمنية متاحة لهذا المعينين"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اتخاذ إجراء"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع erro التسليم"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل غير المقروءة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__appointment_type_id
+msgid "Online Appointment"
+msgstr "موعد عبر الإنترنت"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_appointment_answer
+msgid "Online Appointment : Answers"
+msgstr "موعد عبر الإنترنت: الإجابات"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_appointment_question
+msgid "Online Appointment : Questions"
+msgstr "موعد عبر الإنترنت: الأسئلة"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_appointment_slot
+msgid "Online Appointment : Time Slot"
+msgstr "موعد عبر الإنترنت: فترة زمنية"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_calendar_appointment_type
+msgid "Online Appointment Type"
+msgstr "نوع الموعد عبر الإنترنت"
+
+#. module: website_booking_axis
+#: model:ir.actions.act_window,name:website_booking_axis.calendar_appointment_type_action
+#: model:ir.ui.menu,name:website_booking_axis.appointment_type_menu
+#: model:ir.ui.menu,name:website_booking_axis.website_appointment_type_menu
+msgid "Online Appointments"
+msgstr "المواعيد عبر الإنترنت"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_all_appointment_form
+msgid "Other Info"
+msgstr "معلومات اخرى"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__partner_new
+msgid "Partner New"
+msgstr "شريك جديد"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Patients"
+msgstr "مرضى"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Pending"
+msgstr "قيد الانتظار"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_calendar_event_search
+msgid "Pending Appointment"
+msgstr "موعد معلق"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Phone:"
+msgstr "هاتف:"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__placeholder
+msgid "Placeholder"
+msgstr "عنصر نائب"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/models/calendar_appointment.py:0
+#, python-format
+msgid "Please enter a valid hour between 0:00 to 24:00 for your slots."
+msgstr "الرجاء إدخال ساعة صالحة بين 0:00 حتي 24:00 للخانات الخاصة بك."
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__price_unit
+msgid "Price Unit"
+msgstr "وحدة السعر"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__pricelist_id
+msgid "Pricelist"
+msgstr "قائمة الاسعار"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Provider"
+msgstr "مزود"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Purchase"
+msgstr "شراء"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__name
+msgid "Question"
+msgstr "سؤال"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__question_type
+msgid "Question Type"
+msgstr "نوع السؤال"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_answer__question_id
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__question_ids
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Questions"
+msgstr "أسئلة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__radio
+msgid "Radio (one answer)"
+msgstr "راديو (إجابة واحدة)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_type__assignation_method__random
+msgid "Random"
+msgstr "عشوائي"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Reference"
+msgstr "المرجعي"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_calendar_event_search
+msgid "Rejected Appointment"
+msgstr "موعد مرفوض"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__reminder_ids
+msgid "Reminders"
+msgstr "تذكير"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__question_required
+msgid "Required Answer"
+msgstr "الجواب المطلوب"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__country_ids
+msgid "Restrict Countries"
+msgstr "تقييد البلدان"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_kanban
+msgid "SCHEDULED"
+msgstr "المقرر"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__is_seo_optimized
+msgid "SEO optimized"
+msgstr "تحسين محركات البحث"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: website_booking_axis
+#: model:calendar.alarm,name:website_booking_axis.calendar_alarm_data_1h_sms
+msgid "SMS Text Message - 1 Hours"
+msgstr "رسالة نصية SMS - 1 ساعة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Sales"
+msgstr "مبيعات"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Sales & Purchase"
+msgstr "المبيعات والشراء"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_sale_order
+msgid "Sales Order"
+msgstr "أمر البيع"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Salesperson"
+msgstr "مندوب مبيعات"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Sat"
+msgstr "قعد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__saturday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__6
+msgid "Saturday"
+msgstr "السبت"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Schedule Appointment"
+msgstr "جدولة موعد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__min_schedule_hours
+msgid "Schedule before (hours)"
+msgstr "جدولة قبل (ساعات)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__max_schedule_days
+msgid "Schedule not after (days)"
+msgstr "الجدول ليس بعد (أيام)"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Scheduling & Availability"
+msgstr "الجدولة والتوافر"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search <span class=\"nolabel\"> (in Content)</span>"
+msgstr "ابحث في <span class = \ "nolabel \"> (في المحتوى) </ span>"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search ID"
+msgstr "معرف البحث"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search in All"
+msgstr "بحث في الكل"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search in Customer"
+msgstr "البحث في العملاء"
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Search in Messages"
+msgstr "ابحث في الرسائل"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+msgid "Select"
+msgstr "يختار"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__seo_name
+msgid "Seo name"
+msgstr "اسم سيو"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_question__sequence
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__sequence
+msgid "Sequence"
+msgstr "تسلسل"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+#, python-format
+msgid "Services"
+msgstr "خدمات"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_question__question_type__char
+msgid "Single line text"
+msgstr "نص سطر واحد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__slot_ids
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__slot_ids
+msgid "Slot"
+msgstr "فتحة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Slots"
+msgstr "فتحات"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__source
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_source__name
+msgid "Source"
+msgstr "مصدر"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__specialist
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__specialist
+msgid "Specialist"
+msgstr "متخصص"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__start_at
+msgid "Start At"
+msgstr "تبدأ في"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_timeslot__start_time
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_event__start_time
+msgid "Start Time"
+msgstr "وقت البدء"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "Starting Appointment (0:00 - 24:00)"
+msgstr "موعد البدء (0:00 - 24:00)"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__hour
+msgid "Starting Hour"
+msgstr "ساعة البدء"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment_group__state_id
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "State"
+msgstr "حالة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Street 2..."
+msgstr "شارع 2 ..."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Street..."
+msgstr "شارع..."
+
+#. module: website_booking_axis
+#: code:addons/website_booking_axis/controllers/main.py:0
+#, python-format
+msgid "Subject"
+msgstr "موضوعات"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__price_subtotal
+msgid "Subtotal"
+msgstr "المجموع الفرعي"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Sun"
+msgstr "شمس"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__sunday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__7
+msgid "Sunday"
+msgstr "الأحد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__tax_id
+msgid "Tax"
+msgstr "ضريبة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__website_url
+msgid "The full URL to access the document through the website."
+msgstr "عنوان URL الكامل للوصول إلى المستند من خلال الموقع."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "There are currently no Appointments for your account."
+msgstr "لا يوجد حاليا مواعيد لحسابك."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Thu"
+msgstr "خميس"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__thursday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__4
+msgid "Thursday"
+msgstr "يوم الخميس"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_appointment__time_slot
+#: model_terms:ir.actions.act_window,help:website_booking_axis.action_appointment_timeslot
+msgid "Time Slot"
+msgstr "فسحة زمنية"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.portal_appointment_layout
+msgid "TimeSlot"
+msgstr "فسحة زمنية"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "Timeslots"
+msgstr "فتحات الوقت"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__appointment_tz
+msgid "Timezone"
+msgstr "وحدة زمنية"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__appointment_tz
+msgid "Timezone where appointment take place"
+msgstr "المنطقة الزمنية التي يتم فيها الموعد"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__title
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__title
+msgid "Title"
+msgstr "العنوان"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/js/appointment_dashboard.js:0
+#, python-format
+msgid "To be Invoiced"
+msgstr "لتصدر بها فاتورة"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Today"
+msgstr "اليوم"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_calendar_event_search
+msgid "Today Appointment"
+msgstr "موعد اليوم"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Total"
+msgstr "المجموع"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Total Amount"
+msgstr "المبلغ الإجمالي"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Tue"
+msgstr "الثلاثاء"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__tuesday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__2
+msgid "Tuesday"
+msgstr "يوم الثلاثاء"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_unread
+msgid "Unread Messages"
+msgstr "رسائل غير مقروءة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل غير المقروءة"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_published
+msgid "Visible on current website"
+msgstr "مرئي على الموقع الحالي"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_url
+msgid "Website URL"
+msgstr "رابط الموقع"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,help:website_booking_axis.field_calendar_appointment_type__website_message_ids
+msgid "Website communication history"
+msgstr "سجل اتصال الموقع"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_meta_description
+msgid "Website meta description"
+msgstr "وصف تعريف موقع الويب"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_meta_keywords
+msgid "Website meta keywords"
+msgstr "الكلمات المفتاحية لموقع الويب"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_meta_title
+msgid "Website meta title"
+msgstr "العنوان التعريفي للموقع"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_type__website_meta_og_img
+msgid "Website opengraph image"
+msgstr "صورة موقع opengraph"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.slot
+msgid "Wed"
+msgstr "تزوج"
+
+#. module: website_booking_axis
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__appointment_timeslot__day__wednesday
+#: model:ir.model.fields.selection,name:website_booking_axis.selection__calendar_appointment_slot__weekday__3
+msgid "Wednesday"
+msgstr "الأربعاء"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_calendar_appointment_slot__weekday
+msgid "Week Day"
+msgstr "يوم الأسبوع"
+
+#. module: website_booking_axis
+#. openerp-web
+#: code:addons/website_booking_axis/static/src/xml/appointment_dashboard.xml:0
+#, python-format
+msgid "Weekly Appointments"
+msgstr "المواعيد الأسبوعية"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "When:"
+msgstr "متى:"
+
+#. module: website_booking_axis
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_partner__work_exp
+#: model:ir.model.fields,field_description:website_booking_axis.field_res_users__work_exp
+msgid "Work Experience"
+msgstr "خبرة في العمل"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointees_availability
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_1
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_country
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Appointments"
+msgstr "مواعيدك"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Country"
+msgstr "بلدك"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Email"
+msgstr "بريدك الالكتروني"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Message"
+msgstr "رسالتك"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_form
+msgid "Your Phone"
+msgstr "هاتفك"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "Your appointment is in less than"
+msgstr "موعدك في أقل من"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "ZIP"
+msgstr "أَزِيز"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_appointment
+msgid "appointment"
+msgstr "موعد"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_appointment_group
+msgid "appointment.group"
+msgstr "تعيين المجموعة"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_appointment_source
+msgid "appointment_source"
+msgstr "التعيين_مصدر"
+
+#. module: website_booking_axis
+#: model:ir.model,name:website_booking_axis.model_appointment_timeslot
+msgid "appointment_timeslot"
+msgstr "الموعد_الوقت"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "e.g. 1-2 years"
+msgstr "على سبيل المثال 1-2 سنة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "e.g. Mr."
+msgstr "على سبيل المثال السيد."
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.view_partner_form_inherit
+msgid "e.g. Sales Director"
+msgstr "على سبيل المثال مدير مبيعات"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.calendar_appointment_type_view_form
+msgid "e.g. Schedule a demo"
+msgstr "على سبيل المثال جدولة عرض"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "hour"
+msgstr "ساعة"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "hours from now!"
+msgstr "ساعات من الآن!"
+
+#. module: website_booking_axis
+#: model_terms:ir.ui.view,arch_db:website_booking_axis.appointment_confirm
+msgid "with"
+msgstr "مع"
