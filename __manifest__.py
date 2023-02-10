@@ -1,67 +1,67 @@
 # -*- coding: utf-8 -*-
-#################################################################################
-# Author      : Kanak Infosystems LLP. (<https://www.kanakinfosystems.com/>)
-# Copyright(c): 2012-Present Kanak Infosystems LLP.
-# All Rights Reserved.
-#
-#
-# This program is copyright property of the author mentioned above.
-# You can`t redistribute it and/or modify it.
-#
-#
-# You should have received a copy of the License along with this program.
-# If not, see <https://www.kanakinfosystems.com/license>
-#################################################################################
-
 {
-    "name": "POS Scan Table QR Code (Restaurant)",
-    "version": "16.0.1.1",
-    "category": "Point of Sale",
-    "depends": ['pos_restaurant', 'website'],
-    'license': 'OPL-1',
-    'website': 'https://www.kanakinfosystems.com',
-    'author': 'Kanak Infosystems LLP.',
-    'summary': 'This module is very useful for restaurant owners who want to automate food ordering at the convenience of customer sitting at a particular table. | Table Booking | Table QR Code | QRCODE | QR Code | Table QR Code | POS Table QR Code',
-    "description": "Order from your table by scanning QR Code using your mobile.",
-    "data": [
+    'name': "Website Booking in odoo, Website Appointment Booking in odoo, calendar slot booking in odoo",
+    'summary': "Website Appointment Booking in odoo,Website Booking in odoo, Website appointments doctor appointments book appointment clinic appointment calendar booking consultant booking online booking",
+    'description': """
+       Website Booking in odoo 16, 15, 14, 13, 12, Website Appointment Booking in odoo Website Booking, slot booking consultant booking online booking book appointment """,
+    'category': 'website',
+    'version': '16.0.0.1',
+    # any module necessary for this one to work correctly
+    'depends': ['base','calendar','account','crm','contacts',
+                'website','website_sale', 'hr'],
+
+    # always loaded
+    'data': [
+        'security/security.xml',
         'security/ir.model.access.csv',
-        'data/data.xml',
-        'views/views.xml',
-        'views/template.xml',
-        'views/modal_templates.xml',
-        'views/website_confirm_order_templates.xml',
-        'views/pos_config_view.xml',
+        'data/website_calendar_data.xml',
+        # 'views/assets.xml',
+	'views/res_config_view.xml',
+        'views/portal_templates_view.xml',
+        'views/portal_appointment_templates.xml',
+        'views/appointment_views.xml',
+        'views/menu_dashboard_view.xml',
+        'views/website.xml',
+        'views/website_view.xml',
+        'views/appointment_source_views.xml',
+        'views/appointee_views.xml',
+        'views/appointment_group_views.xml',
+        'views/appointment_timeslot_views.xml',
+        'views/calendar_appointment_views.xml',
     ],
-    'images': [
-        'static/description/banner.gif',
-    ],
-    'qweb': ['static/src/xml/pos.xml'],
-    "auto_install": False,
+    # 'qweb': ["static/src/xml/appointment_dashboard.xml",
+    #          ],
     'assets': {
+        'web._assets_primary_variables': [
+            '/website_booking_axis/static/src/css/custom_style.css',
+        ],
+        'web.assets_backend': [
+            'website_booking_axis/static/src/xml/**/*',
+            '/website_booking_axis/static/src/js/appointment_dashboard.js',
+            '/website_booking_axis/static/src/js/jquery.dataTables.min.js',
+            '/website_booking_axis/static/src/js/datatables.min.js',
+            '/website_booking_axis/static/src/js/dataTables.buttons.min.js',
+            '/website_booking_axis/static/src/js/Chart.js',
+            '/website_booking_axis/static/src/css/nv.d3.css',
+            '/website_booking_axis/static/src/scss/style.scss',
+
+        ],
         'web.assets_frontend': [
-            '/qrcode_table/static/src/css/quickview.css',
-            '/qrcode_table/static/src/css/custom.css',
-            '/qrcode_table/static/src/js/custom.js',
+            '/website_booking_axis/static/src/css/custom_style.css',
+            '/website_booking_axis/static/src/js/custom_step_wizard.js',
+            '/website_booking_axis/static/src/js/custom.js',
+
         ],
-        'point_of_sale.assets': [
-            'qrcode_table/static/src/css/pos.css',
-            'qrcode_table/static/lib/noty/lib/noty.css',
-            'qrcode_table/static/lib/noty/lib/themes/light.css',
-            'qrcode_table/static/lib/noty/lib/noty.js',
-            'qrcode_table/static/src/js/models.js',
-            'qrcode_table/static/src/js/Chrome.js',
-            'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderList.js',
-            'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderLine.js',
-            'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderPosLines.js',
-            'qrcode_table/static/src/js/Screens/ProductScreen/ControlButtons/TableOrderButton.js',
-            'qrcode_table/static/src/xml/Screens/ProductScreen/ControlButtons/TableOrderButton.xml',
-            'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderList.xml',
-            'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderLine.xml',
-            'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderPosLines.xml',
-        ],
+
     },
-    "installable": True,
-    "price": 150,
-    "currency": "EUR",
-    'live_test_url': 'https://youtu.be/iLlgLMxYdAc',
+
+    'price': 199.00,
+    'currency': 'USD',
+    'support': 'business@axistechnolabs.com',
+    'author': 'Axis Technolabs',
+    'website': 'https://www.axistechnolabs.com',
+    'installable': True,
+    'license': 'OPL-1',
+    'images': ['static/description/images/banner.jpg'],
+
 }

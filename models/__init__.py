@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
-
-from . import qrcode_table
-from . import res_config_settings
+from . import appointment_group
+from . import appointment_timeslot
+from . import appointment_source
+from . import calendar_appointment
+from . import appointment
+from . import appointment_dashboard
+from . import res_config
