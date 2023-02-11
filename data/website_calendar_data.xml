@@ -12,11 +12,11 @@
             <field name="alarm_type">sms</field>
         </record>
 
-        <record id="menu_appointment" model="website.menu">
+<!--         <record id="menu_appointment" model="website.menu">
             <field name="name">Appointment</field>
             <field name="url">/appointment/select</field>
             <field name="parent_id" ref="website.main_menu"/>
             <field name="sequence" type="int">60</field>
-        </record>
+        </record> -->
     </data>
 </odoo>
