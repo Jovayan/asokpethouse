@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <function model="res.config.settings" name="action_wk_set_packaging_option"/>
+
+        <record id="product.group_stock_packaging" model="res.groups">
+           <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+        <record id="stock.group_tracking_lot" model="res.groups">
+           <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+        </record>
+
+        <function  model="res.config.settings" name="demo_data_product">
+            <value>packaged product 1(Test Product)</value>    
+            <value>pack of 4</value> 
+            <value>pack of 6</value> 
+            <value>4</value> 
+            <value>6</value> 
+            <value>Test BOM 1</value>  
+        </function>
+
+        <function  model="res.config.settings" name="demo_data_product">
+            <value>packaged product 2(Test Product)</value>    
+            <value>pack of 5</value> 
+            <value>pack of 10</value> 
+            <value>5</value> 
+            <value>10</value> 
+            <value>Test BOM 2</value>  
+        </function>
+
+        
+
+        <function  model="res.config.settings" name="demo_data_sale_order">
+        </function>
+
+        
+    </data>
+
+</odoo>
