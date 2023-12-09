@@ -7,8 +7,19 @@ odoo.define('qrcode_table.models', function(require) {
     const QrcodeTableOrder = (Order) => class QrcodeTableOrder extends Order {
         constructor(obj, options) {
             super(...arguments);
-            this.is_table_order = false;
-            this.token = false;
+            if(options.json && options.json.token){
+                this.is_table_order = options.json.is_table_order;
+                this.token = options.json.token;
+            }else{
+                this.is_table_order = false;
+                this.token = false;
+            }
+        }
+        set_orderline_options(orderline, options) {
+            super.set_orderline_options(...arguments);
+            if(options.table_order_line_id !== undefined){
+                orderline.set_table_order_line_id(options.table_order_line_id);
+            }
         }
         set_is_table_order(is_table_order) {
             this.is_table_order = is_table_order;
@@ -36,9 +47,13 @@ odoo.define('qrcode_table.models', function(require) {
         //@override
         export_as_JSON() {
             const json = super.export_as_JSON(...arguments);
-            json.is_table_order = this.get_is_table_order();
-            json.token = this.get_token_table();
+            json['is_table_order'] = this.get_is_table_order();
+            json['token'] = this.get_token_table();
             return json;
+        }
+        init_from_JSON(json) {
+            super.init_from_JSON(...arguments);
+            this.token = json.token;
         }
     }
     Registries.Model.extend(Order, QrcodeTableOrder);
@@ -46,13 +61,32 @@ odoo.define('qrcode_table.models', function(require) {
     const QrcodeTableOrderLine = (Orderline) => class QrcodeTableOrderLine extends Orderline {
         constructor(obj, options) {
             super(...arguments);
-            this.table_order_line_id = false;
+            if (options.json && options.json.table_order_line_id) {
+                this.table_order_line_id = options.json.table_order_line_id;
+            }else{
+                this.table_order_line_id = this.table_order_line_id || 0;
+            }
+            
         }
         set_table_order_line_id(table_order_line_id) {
             this.table_order_line_id = table_order_line_id;
         }
         get_table_order_line_id() {
             return this.table_order_line_id;
+        }
+        export_as_JSON() {
+            const json = super.export_as_JSON(...arguments);
+            json['table_order_line_id'] = this.get_table_order_line_id();
+            return json;
+        }
+        init_from_JSON(json) {
+            super.init_from_JSON(...arguments);
+            this.table_order_line_id = json.table_order_line_id;
+        }
+        clone(){
+            var line = super.clone(...arguments);
+            line.table_order_line_id = this.table_order_line_id;
+            return line;
         }
     }
     Registries.Model.extend(Orderline, QrcodeTableOrderLine);

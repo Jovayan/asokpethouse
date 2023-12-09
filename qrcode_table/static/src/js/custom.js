@@ -31,7 +31,7 @@ odoo.define('qrcode_table.custom', function(require) {
                 keyboard: false
             });
             $(".quick-modal").each(function() {
-                $('input.js_variant_change', this).first().trigger('change');
+                $(this).find('input.js_variant_change', this).first().trigger('change');
             });
             return def;
         },
@@ -61,6 +61,9 @@ odoo.define('qrcode_table.custom', function(require) {
             formatted[0] = utils.insert_thousand_seps(formatted[0]);
             return formatted.join(l10n.decimal_point);
         },
+        extra_price_name_variant_name: function(event){
+
+        },
         _onChangeQucikViewVariant: function(ev) {
             var self = this;
             var $ul = $(ev.target).closest('.js_add_cart_variants');
@@ -70,14 +73,24 @@ odoo.define('qrcode_table.custom', function(require) {
             var $default_price = $parent.find(".oe_default_price:first .oe_currency_value");
             var $optional_price = $parent.find(".oe_optional:first .oe_currency_value");
             var variant_ids = $ul.data("attribute_value_ids");
+            var $extr_price_input = $parent.find("input[name='product_price']");
+            var $product_attribute_val_name = $parent.find("input[name='product_attribute_val_name']");
+            var $price_extra = $parent.find("input[name='price_extra']");
             if (_.isString(variant_ids)) {
                 variant_ids = JSON.parse(variant_ids.replace(/'/g, '"'));
             }
             var values = [];
             var unchanged_values = $parent.find('div.oe_unchanged_value_ids').data('unchanged_value_ids') || [];
-
+            var pro_att_names = [];
+            var extra_prices = [];
             $parent.find('input.js_variant_change:checked').each(function() {
                 values.push(+$(this).val());
+                if($(this).data('extra_price') != undefined){
+                    extra_prices.push(parseFloat($(this).data('extra_price'), 10));
+                }
+                if($(this).attr('pro_att_name') != undefined && $(this).attr('pro_att_name') != ''){
+                    pro_att_names.push($(this).attr('pro_att_name'));
+                }
             });
             values = values.concat(unchanged_values);
 
@@ -85,7 +98,13 @@ odoo.define('qrcode_table.custom', function(require) {
 
             var product_id = false;
             for (var k in variant_ids) {
-                $price.html(self._priceToStr(variant_ids[k][2]));
+                var prsum = 0;
+                if(extra_prices.length){
+                    var prsum = extra_prices.reduce((a, b)=> a + b, 0);
+                }
+
+                var vprice = variant_ids[k][2] + prsum;
+                $price.html(self._priceToStr(vprice));
                 $default_price.html(self._priceToStr(variant_ids[k][3]));
 
                 if (_.isEmpty(_.difference(variant_ids[k][1], values))) {
@@ -101,7 +120,7 @@ odoo.define('qrcode_table.custom', function(require) {
                     break;
                 }
             }
-
+            
             $parent.find("input.js_variant_change:radio, select.js_variant_change").each(function() {
                 var $input = $(this);
                 var id = +$input.val();
@@ -129,6 +148,18 @@ odoo.define('qrcode_table.custom', function(require) {
                 $product_id.val(0);
                 $parent.find("#add_to_cart").addClass("disabled");
             }
+            $extr_price_input.val($price.text());
+            // $product_attribute_val_name
+            $extr_price_input.trigger('change');
+            if(pro_att_names.length){
+                $product_attribute_val_name.val(pro_att_names.join(', '));
+                $product_attribute_val_name.trigger('change');  
+            }
+            if(extra_prices.length){
+                var prsum = extra_prices.reduce((a, b)=> a + b, 0);
+                $price_extra.val(prsum);
+                $price_extra.trigger('change');  
+            }
         },
         _onClickQuickViewPOSTable: function(event) {
             var $modal_quick = $(event.currentTarget).closest('.productprice').find('.quick-modal');
@@ -154,16 +185,28 @@ odoo.define('qrcode_table.custom', function(require) {
             var quantity = parseFloat($(event.currentTarget).closest('.quick-modal').find("input[name='add_qty']").val()) || 1.0;
             var notes = $(event.currentTarget).closest('.quick-modal').find("#notes").val()
             var $productbox = $(event.currentTarget).closest('.productbox');
+            // var datas = this.extra_price_name_variant_name(event);
+            var price_unit = parseFloat($(event.currentTarget).closest('.quick-modal').find("input[name='product_price']").val());
+            var price_extra = parseFloat($(event.currentTarget).closest('.quick-modal').find("input[name='price_extra']").val());
+            if(isNaN(price_unit)){
+                price_unit = parseFloat($(event.currentTarget).closest('.quick-modal').find(".js_product .oe_price:first .oe_currency_value").text());
+            }
+            if(isNaN(price_extra)){
+                price_extra = parseFloat(0);
+            }
+            var description = $(event.currentTarget).closest('.quick-modal').find("input[name='product_attribute_val_name']").val();
             event.preventDefault();
             $(".quick-modal.in").modal('hide');
-
             self._rpc({
                 route: "/table/cart/update_json",
                 params: {
                     product_id: product_id,
                     table_id: table_id,
                     add_qty: quantity,
-                    note: notes
+                    note: notes,
+                    price_unit: price_unit,
+                    price_extra: price_extra,
+                    description: description
                 },
             }).then(function(data) {
                 if (data) {

@@ -19,7 +19,7 @@
                         </td>
                         <td t-if="line.product_id.product_tmpl_id" class='td-product_name'>
                             <div>
-                                <strong t-field="line.product_id.name" />
+                                <strong t-field="line.name" />
                             </div>
                         </td>
                         <td class="text-center td-qty">

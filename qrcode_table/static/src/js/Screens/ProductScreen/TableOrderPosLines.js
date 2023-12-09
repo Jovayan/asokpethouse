@@ -22,7 +22,7 @@ odoo.define('qrcode_table.TableOrderPosLines', function(require) {
                 if (tableorderslinestate) {
                     const TableOrderList = Registries.Component.get('TableOrderList');
                     var tableorders = await TableOrderList.prototype.get_table_orders.apply(this, arguments);
-                    this.trigger('close-temp-screen');
+                    await this.trigger('close-temp-screen');
                     await this.showTempScreen('TableOrderList', {
                         'tableorders': tableorders || []
                     });

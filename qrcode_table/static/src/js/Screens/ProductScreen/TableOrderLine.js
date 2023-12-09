@@ -21,45 +21,55 @@ odoo.define('qrcode_table.TableOrderLine', function(require) {
         }
         async add_to_cart_table_order() {
             var self = this;
-            var order = this.env.pos.get_order();
+            var order = undefined;
+            var isexit = undefined
             var table = this.env.pos.tables_by_id[this.props.tos.table_id];
-            this.env.pos.setTable(table);
-            var isexit = this.filter_order(this.props.tos.token);
-            if (isexit) {
-                isexit.set_is_table_order(this.props.tos.is_table_order);
-                isexit.set_token_table(this.props.tos.token);
-                _.each(this.props.tos.line, function(line) {
-                    var product = self.env.pos.db.get_product_by_id(line.product_id);
-                    var is_line_exit = isexit.get_line_all_ready_exit(line.id);
-                    if (!is_line_exit) {
-                        isexit.add_product(product, { quantity: line.qty, merge: false });
-                        var od_line = isexit.get_selected_orderline();
-                        od_line.set_table_order_line_id(line.id);
-                        od_line.set_note(line.note);
-                    }
-                });
-                await this.trigger('close-temp-screen');
-                const orderTable = isexit.getTable();
-                this.env.pos.set_order(isexit);
-                this.env.pos.setTable(orderTable, isexit.uid);
-            } else {
-                order = this.env.pos.add_new_order();
+            var orders = this.env.pos.orders.filter((order) => { return order.tableId == table.id && order.token == this.props.tos.token && !order.finalized });
+            if (orders.length > 0) {
+                order = orders[0];
+                isexit = order;
+                await this.env.pos.setTable(table, order.uid);
+            }
+            if (isexit != undefined) {
+                order = this.env.pos.get_order();
                 order.set_is_table_order(this.props.tos.is_table_order);
                 order.set_token_table(this.props.tos.token);
                 _.each(this.props.tos.line, function(line) {
-                    var product = self.env.pos.db.get_product_by_id(line.product_id);
-                    var is_line_exit = order.get_line_all_ready_exit(line.id);
-                    if (!is_line_exit) {
-                        order.add_product(product, { quantity: line.qty, merge: false });
-                        var od_line = order.get_selected_orderline();
-                        od_line.set_table_order_line_id(line.id);
-                        od_line.set_note(line.note);
+                    if (line.state != 'cancel') {
+                        var product = self.env.pos.db.get_product_by_id(line.product_id);
+                        var is_line_exit = order.get_line_all_ready_exit(line.id);
+                        if (!is_line_exit) {
+                            order.add_product(product, { quantity: line.qty, merge: false, description: line.description, price_extra: line.price_extra, table_order_line_id: line.id });
+                            var od_line = order.get_selected_orderline();
+                            od_line.set_table_order_line_id(line.id);
+                            od_line.set_note(line.note);
+                        }
                     }
                 });
                 await this.trigger('close-temp-screen');
-                const orderTable = order.getTable();
-                this.env.pos.set_order(order);
-                this.env.pos.setTable(orderTable, order.uid);
+                order.save_to_db();
+                await this.env.pos._syncTableOrdersToServer();
+            } else {
+                await this.env.pos.setTable(table);
+                order = this.env.pos.get_order();
+                // order = this.env.pos.add_new_order();
+                order.set_is_table_order(this.props.tos.is_table_order);
+                order.set_token_table(this.props.tos.token);
+                _.each(this.props.tos.line, function(line) {
+                    if (line.state != 'cancel') {
+                        var product = self.env.pos.db.get_product_by_id(line.product_id);
+                        var is_line_exit = order.get_line_all_ready_exit(line.id);
+                        if (!is_line_exit) {
+                            order.add_product(product, { quantity: line.qty, merge: false, description: line.description, price_extra: line.price_extra });
+                            var od_line = order.get_selected_orderline();
+                            od_line.set_table_order_line_id(line.id);
+                            od_line.set_note(line.note);
+                        }
+                    }
+                });
+                await this.trigger('close-temp-screen');
+                await this.env.pos.setTable(table, order.uid);
+                await this.env.pos._syncTableOrdersToServer();
             }
         }
         async _onClickSendKitchen() {
@@ -67,6 +77,8 @@ odoo.define('qrcode_table.TableOrderLine', function(require) {
             const order = this.env.pos.get_order();
             const SubmitOrderButton = Registries.Component.get('SubmitOrderButton');
             await SubmitOrderButton.prototype._onClick.apply(this, arguments);
+            order.save_to_db();
+            await this.env.pos._syncTableOrdersToServer();
             await this.rpc({
                 model: 'table.order',
                 method: 'change_table_prepare_order',
@@ -83,7 +95,7 @@ odoo.define('qrcode_table.TableOrderLine', function(require) {
                 if (res) {
                     const TableOrderList = Registries.Component.get('TableOrderList');
                     var tableorders = await TableOrderList.prototype.get_table_orders.apply(this, arguments);
-                    this.trigger('close-temp-screen');
+                    await this.trigger('close-temp-screen');
                     await this.showTempScreen('TableOrderList', {
                         'tableorders': tableorders || []
                     });

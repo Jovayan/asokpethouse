@@ -1,21 +1,10 @@
 # -*- coding: utf-8 -*-
-#################################################################################
-# Author      : Kanak Infosystems LLP. (<https://www.kanakinfosystems.com/>)
-# Copyright(c): 2012-Present Kanak Infosystems LLP.
-# All Rights Reserved.
-#
-#
-# This program is copyright property of the author mentioned above.
-# You can`t redistribute it and/or modify it.
-#
-#
-# You should have received a copy of the License along with this program.
-# If not, see <https://www.kanakinfosystems.com/license>
-#################################################################################
+# Powered by Kanak Infosystems LLP.
+# © 2020 Kanak Infosystems LLP. (<https://www.kanakinfosystems.com>).
 
 {
     "name": "POS Scan Table QR Code (Restaurant)",
-    "version": "16.0.1.1",
+    "version": "16.0.2.9",
     "category": "Point of Sale",
     "depends": ['pos_restaurant', 'website'],
     'license': 'OPL-1',
@@ -39,29 +28,30 @@
     "auto_install": False,
     'assets': {
         'web.assets_frontend': [
-            '/qrcode_table/static/src/css/quickview.css',
-            '/qrcode_table/static/src/css/custom.css',
-            '/qrcode_table/static/src/js/custom.js',
+            'qrcode_table/static/src/css/quickview.css',
+            'qrcode_table/static/src/css/custom.css',
+            'qrcode_table/static/src/js/custom.js',
         ],
         'point_of_sale.assets': [
             'qrcode_table/static/src/css/pos.css',
             'qrcode_table/static/lib/noty/lib/noty.css',
             'qrcode_table/static/lib/noty/lib/themes/light.css',
-            'qrcode_table/static/lib/noty/lib/noty.js',
             'qrcode_table/static/src/js/models.js',
+            'qrcode_table/static/lib/noty/lib/noty.js',
             'qrcode_table/static/src/js/Chrome.js',
             'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderList.js',
             'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderLine.js',
             'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderPosLines.js',
             'qrcode_table/static/src/js/Screens/ProductScreen/ControlButtons/TableOrderButton.js',
+            'qrcode_table/static/src/js/Screens/FloorScreen/FloorScreenExtended.js',
             'qrcode_table/static/src/xml/Screens/ProductScreen/ControlButtons/TableOrderButton.xml',
             'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderList.xml',
             'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderLine.xml',
-            'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderPosLines.xml',
+            'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderPosLines.xml'
         ],
     },
     "installable": True,
-    "price": 150,
+    "price": 180,
     "currency": "EUR",
     'live_test_url': 'https://youtu.be/iLlgLMxYdAc',
 }

@@ -8,3 +8,4 @@ access_product_attribute_line_public,product.attribute.line.public,product.model
 access_product_attribute_value_public,product.attribute.value.public,product.model_product_attribute_value,,1,0,0,0
 access_product_attribute_price_public,product.attribute.price.public,product.model_product_template_attribute_value,,1,0,0,0
 access_product_attribute_public,product.attribute.public,product.model_product_attribute,,1,0,0,0
+access_pos_session_id,access_pos_session_name,point_of_sale.model_pos_session,,1,1,1,1

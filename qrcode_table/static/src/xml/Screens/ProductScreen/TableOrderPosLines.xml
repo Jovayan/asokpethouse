@@ -1,44 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates id="template" xml:space="preserve">
-	 <t t-name="TableOrderPosLines" owl="1">
+    <t t-name="TableOrderPosLines" owl="1">
         <tr t-if="props.tos.line" t-att-data-parent_id="props.tos.id" class="table_order_list_product" t-att-class="{trhide : !props.tosindex == 0}">
             <td colspan="10">
                 <table style="width:100%;">
                     <thead>
-                        <th>Product</th>
-                        <th>Notes</th>
-                        <th>QTY</th>
-                        <th>Price</th>
-                        <th>Status</th>
-                    </thead>
-                    <tbody>
-                        <t t-foreach="props.tos.line" t-as="line" t-key="line.id">
-                            <tr>
-                                <td>
-                                    <t t-esc="line.name" />
-                                </td>
-                                <td>
-                                    <t t-esc="line.note" />
-                                </td>
-                                <td>
-                                    <t t-esc="line.qty" />
-                                </td>
-                                <td>
-                                    <t t-esc="line.price" />
-                                </td>
-                                <td>
-                                    <t t-esc="line.state" />
-                                </td>
-                                <td>
-                                    <span class="control-button btn_table_order_state mt10 btn_small_size"  t-att-class="{btnhide: line.state !== 'confirm'}" t-on-click="() => this.trigger('change-linne-state', {'line_id': line.id, 'state': 'ordered'})">Accepted</span>
-                                    <span class="control-button btn_table_order_state mt10 btn_small_size" t-att-class="{btnhide: line.state !== 'ordered'}" t-on-click="() => this.trigger('change-linne-state', {'line_id': line.id, 'state': 'prepared'})">Preparing</span>
-                                    <span class="control-button btn_table_order_state mt10 btn_small_size" t-att-class="{btnhide: line.state !== 'prepared'}" t-on-click="() => this.trigger('change-linne-state', {'line_id': line.id, 'state': 'served'})">Served</span>
-                                    <span class="control-button btn_table_order_state mt10 btn_small_size" t-att-class="{btnhide : line.state === 'cancel'}" t-on-click="() => this.trigger('change-linne-state', {'line_id': line.id, 'state': 'cancel'})">Cancel</span>
-                                </td>
-                            </tr>
-                        </t>
-                    </tbody>
-                </table>
+            <th>Product</th>
+            <th>Notes</th>
+            <th>QTY</th>
+            <th>Price</th>
+            <th>Status</th>
+            </thead>
+            <tbody>
+                <t t-foreach="props.tos.line" t-as="line" t-key="line.id">
+                    <tr>
+                        <td>
+                            <t t-esc="line.name" />
+                        </td>
+                        <td>
+                            <t t-esc="line.note" />
+                        </td>
+                        <td>
+                            <t t-esc="line.qty" />
+                        </td>
+                        <td>
+                            <t t-if="line.module_qrcode_table_theme == True">
+                                <t t-esc="(line.price_extra + line.price_unit) * line.qty" />
+                            </t>
+                            <t t-else="">
+                                <t t-esc="line.price" />
+                            </t>
+                        </td>
+                        <td>
+                            <t t-esc="line.state" />
+                        </td>
+                        <td>
+                            <span class="control-button btn_table_order_state mt10 btn_small_size" t-att-class="{btnhide: line.state !== 'confirm'}" t-on-click="() => this.trigger('change-linne-state', {'line_id': line.id, 'state': 'ordered'})">Accepted</span>
+                            <span class="control-button btn_table_order_state mt10 btn_small_size" t-att-class="{btnhide: line.state !== 'ordered'}" t-on-click="() => this.trigger('change-linne-state', {'line_id': line.id, 'state': 'prepared'})">Preparing</span>
+                            <span class="control-button btn_table_order_state mt10 btn_small_size" t-att-class="{btnhide: line.state !== 'prepared'}" t-on-click="() => this.trigger('change-linne-state', {'line_id': line.id, 'state': 'served'})">Served</span>
+                            <span class="control-button btn_table_order_state mt10 btn_small_size" t-att-class="{btnhide : line.state === 'cancel'}" t-on-click="() => this.trigger('change-linne-state', {'line_id': line.id, 'state': 'cancel'})">Cancel</span>
+                        </td>
+                    </tr>
+                </t>
+            </tbody>
+            </table>
             </td>
         </tr>
     </t>

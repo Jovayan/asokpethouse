@@ -28,7 +28,7 @@ odoo.define('qrcode_table.TableOrderList', function(require) {
                     model: 'table.order',
                     method: 'get_table_order_lists',
                     args: [
-                        []
+                        [table_id]
                     ],
                 });
                 return tableorders;

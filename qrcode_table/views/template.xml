@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+    <template id="badge_extra_price" name="Badge Extra Price">
+        <!-- <t t-set="combination_info_variant" t-value="product._get_combination_info(value_id, pricelist=pricelist)"/> -->
+        <span class="badge rounded-pill text-bg-light border" t-if="combination_info_variant['price_extra']">
+        <span class="sign_badge_price_extra" t-out="combination_info_variant['price_extra'] > 0 and '+' or '-'"/>
+        <span t-out="abs(combination_info_variant['price_extra'])" class="variant_price_extra text-muted fst-italic" style="white-space: nowrap;"
+            t-options='{
+                "widget": "monetary",
+                "display_currency": (pricelist or product).currency_id
+            }'/>
+        </span>
+    </template>
+
     <template id="variants_tmp">
         <t t-set="attribute_value_ids" t-value="get_attribute_value_ids(False,product)" />
         <ul t-attf-class="list-unstyled js_add_cart_variants #{ul_class}" t-att-data-attribute_value_ids="json.dumps(attribute_value_ids)">
@@ -10,16 +22,11 @@
                         <t t-set="inc" t-value="0" />
                         <t t-foreach="variant_id.product_template_value_ids" t-as="value_id">
                             <li class="form-group js_attribute_value" style="margin: 0;">
+                                <t t-set="combination_info_variant" t-value="product._get_combination_info(value_id, pricelist=pricelist)"/>
                                 <label class="control-label" style="margin: 0 20px;">
-                                    <input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None" t-att-checked="'checked' if not inc else None" t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)" t-att-value="value_id.id" style="vertical-align: top; margin-right: 10px;" />
-                                    <span t-field="value_id.name" />
-                                    <span class="badge" t-if="value_id.price_extra">
-                                        <t t-esc="value_id.price_extra > 0 and '+' or ''" /><span t-field="value_id.price_extra" style="white-space: nowrap;" t-options='{
-                                              "widget": "monetary",
-                                              "from_currency": product.currency_id,
-                                              "display_currency": res_company.currency_id
-                                           }' />
-                                    </span>
+                                    <input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None" t-att-checked="'checked' if not inc else None" t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)" t-att-value="value_id.id" style="vertical-align: top; margin-right: 10px;" t-att-data-extra_price="combination_info_variant['price_extra']" t-att-pro_att_name="value_id.name"/>
+                                    <span t-field="value_id.name"/>
+                                    <t t-call="qrcode_table.badge_extra_price"/>
                                 </label>
                             </li>
                             <t t-set="inc" t-value="inc+1" />
@@ -130,6 +137,9 @@
                                                     <textarea name="note" placeholder="Notes" class="form-control" id="notes"></textarea>
                                                 </div>
                                             </div>
+                                            <input type="hidden" name="product_price"/>
+                                            <input type="hidden" name="product_attribute_val_name"/>
+                                            <input type="hidden" name="price_extra" value="0"/>
                                             <buttom id="add_to_cart" class="btn btn-primary btn-md mt8 js_check_product a-submit" t-att-table_id="table_obj.id">Add to Cart</buttom>
                                         </div>
                                     </form>
@@ -151,7 +161,7 @@
                     <th>Qty</th>
                     <th>Price</th>
                     <th width="20" class="pl-0 pr-0">Note</th>
-                    <th width="20">#</th>
+                    <th width="20">-</th>
                 </tr>
             </thead>
             <tbody>
@@ -161,6 +171,9 @@
                             <tr>
                                 <td>
                                     <t t-esc="line.product_id.sudo().with_context(display_default_code=False).display_name" />
+                                    <t t-if="line.description">
+                                        (<t t-esc="line.description" />)
+                                    </t>
                                 </td>
                                 <td>
                                     <t t-esc="line.qty" />
@@ -182,22 +195,26 @@
                 </t>
             </tbody>
             <t t-if="order">
-                <tfoot>
-                    <tr>
-                        <td colspan="5">
-                            <span class="cart_total_table_pos">Taxes: <small t-esc="order.amount_tax" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" /></span>
-                            <span class="cart_total_table_pos">Total: <small t-esc="order.amount_total" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" /></span>
-                        </td>
-                    </tr>
-                </tfoot>
+                <t t-if="order.lines">
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">
+                                <span class="cart_total_table_pos">Taxes: <small t-esc="order.amount_tax" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" /></span>
+                                <span class="cart_total_table_pos">Total: <small t-esc="order.amount_total" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" /></span>
+                            </td>
+                        </tr>
+                    </tfoot>
+                </t>
             </t>
         </table>
         <t t-if="order">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <a href="/confirm/table/order" class="btn btn-success table_confirm_order">Confirm Order</a>
+            <t t-if="order.lines">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <a href="/confirm/table/order" class="btn btn-success table_confirm_order">Confirm Order</a>
+                    </div>
                 </div>
-            </div>
+            </t>
         </t>
     </template>
     <template id="tablebook_temp" name="Booking Table">

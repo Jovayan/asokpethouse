@@ -7,8 +7,9 @@
         <field name="arch" type="xml">
             <xpath expr="//sheet//div[@name='options']" position="inside">
                 <div>
-                    <field name="is_table_order" />
-                    <label for="is_table_order" />
+                    <field name="is_table_order" attrs="{'invisible': [('module_qrcode_table_theme', '=', True)]}" />
+                    <label for="is_table_order" attrs="{'invisible': [('module_qrcode_table_theme', '=', True)]}" />
+                    <field name="module_qrcode_table_theme" invisible="1" />
                 </div>
             </xpath>
         </field>
@@ -22,9 +23,9 @@
                 <group col="4">
                     <field name="name" />
                     <field name="seats" />
-                    <field name="barcode_url" widget="url"/>
+                    <field name="barcode_url" widget="url" />
                     <field name="qr_image" widget="image" readonly="1" />
-                    <field name="qr_image_download" widget="binary" readonly="1" filename="name"/>
+                    <field name="qr_image_download" widget="binary" readonly="1" filename="name" />
                 </group>
             </xpath>
         </field>
@@ -35,9 +36,9 @@
         <field name="inherit_id" ref="pos_restaurant.view_restaurant_floor_form" />
         <field name="arch" type="xml">
             <xpath expr="//field[@name='table_ids']//tree" position="inside">
-                <field name="barcode_url" widget="url"/>
+                <field name="barcode_url" widget="url" />
                 <field name="qr_image" widget="image" readonly="1" />
-                <field name="qr_image_download" widget="binary" readonly="1" filename="name"/>
+                <field name="qr_image_download" widget="binary" readonly="1" filename="name" />
             </xpath>
         </field>
     </record>
@@ -102,7 +103,7 @@
                             <field name="lines" colspan="4" nolabel="1">
                                 <tree string="Order lines" editable="bottom">
                                     <field name="product_id" />
-                                    <field name="note" string="Notes"/>
+                                    <field name="note" string="Notes" />
                                     <field name="qty" />
                                     <field name="price_unit" widget="monetary" />
                                     <field name="discount" widget="monetary" />
@@ -113,7 +114,7 @@
                                 <form string="Order lines">
                                     <group col="4">
                                         <field name="product_id" />
-                                        <field name="note" string="Notes"/>
+                                        <field name="note" string="Notes" />
                                         <field name="qty" />
                                         <field name="discount" widget="monetary" />
                                         <field name="price_unit" widget="monetary" />

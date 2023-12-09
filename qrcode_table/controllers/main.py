@@ -1,24 +1,28 @@
 # -*- coding: utf-8 -*-
+# Powered by Kanak Infosystems LLP.
+# © 2020 Kanak Infosystems LLP. (<https://www.kanakinfosystems.com>).
 
-import json
-import odoo
 from odoo import http
 from odoo.http import request
 
+
 class TableBooking(http.Controller):
-    @http.route(['/table/<model("restaurant.table"):table>'], auth="public", website=True)
+    @http.route(['/table/<model("restaurant.table"):table>'], auth="public", website=True, sitemap=True)
     def table_booking(self, table=None, **post):
         values = {}
         order = None
         old_order_resume = None
-        order_resume = request.env['table.order'].sudo().search([('state', '=', 'draft'), ('active', '=', False), ('is_table_order', '=', True), ('table_id', '=', table.id)], limit=1)
-        old_order_resume = request.env['table.order'].sudo().search([('state', '=', 'draft'), ('active', '=', True), ('is_table_order', '=', True), ('table_id', '=', table.id)], limit=1)
+        order_resume = request.env['table.order'].sudo().search([('state', '=', 'draft'), (
+            'active', '=', False), ('is_table_order', '=', True), ('table_id', '=', table.id)], limit=1)
+        old_order_resume = request.env['table.order'].sudo().search([('state', '=', 'draft'), (
+            'active', '=', True), ('is_table_order', '=', True), ('table_id', '=', table.id)], limit=1)
         if order_resume:
             request.session['sale_table_last_order_id'] = order_resume.id
             order = order_resume
         else:
             request.session['sale_table_last_order_id'] = None
-        products = request.env['product.template'].sudo().search([('is_table_order', '=', True)])
+        products = request.env['product.template'].sudo().search(
+            [('is_table_order', '=', True), ('name', 'ilike', post.get('search', ''))])
         cate_ids = None
         if products:
             cate_ids = products.mapped('pos_categ_id')
@@ -31,10 +35,10 @@ class TableBooking(http.Controller):
             'get_attribute_value_ids': self.get_attribute_value_ids,
             'cate_ids': cate_ids or None,
             'active_cat_id': cate_ids[0] if cate_ids else None
-            })
+        })
         return request.render("qrcode_table.tablebook_temp", values)
 
-    @http.route(['/table/resume/<model("table.order"):torder>'], auth="public", website=True)
+    @http.route(['/table/resume/<model("table.order"):torder>'], auth="public", website=True, sitemap=True)
     def ResumeOrder(self, torder=None, **post):
         values = {}
         order = None
@@ -47,7 +51,8 @@ class TableBooking(http.Controller):
             table = torder.table_id if torder.table_id else None
         else:
             request.session['sale_table_last_order_id'] = None
-        products = request.env['product.template'].sudo().search([('is_table_order', '=', True)])
+        products = request.env['product.template'].sudo().search(
+            [('is_table_order', '=', True), ('name', 'ilike', post.get('search', ''))])
         cate_ids = None
         if products:
             cate_ids = products.mapped('pos_categ_id')
@@ -60,7 +65,7 @@ class TableBooking(http.Controller):
             'get_attribute_value_ids': self.get_attribute_value_ids,
             'cate_ids': cate_ids or None,
             'active_cat_id': cate_ids[0] if cate_ids else None
-            })
+        })
         return request.render("qrcode_table.tablebook_temp", values)
 
     @http.route(['/table/cart/update_json'], type='json', auth="public", csrf=False)
@@ -78,28 +83,43 @@ class TableBooking(http.Controller):
                 line = None
                 if session_order.lines:
                     line = session_order.lines.filtered(
-                        lambda x: x.product_id.sudo().id == int(product_id) and x.state == 'draft')
+                        lambda x: x.product_id.sudo().id == int(product_id) and x.state == 'draft' and x.description == kw.get('description', ''))
                 if line and merge:
-                    line.write({'qty': line.qty + 1, 'state': 'draft'})
+                    line.write({'qty': line.qty + add_qty, 'state': 'draft'})
+                    if kw.get('price_unit', False):
+                        line.write({
+                            'price_unit': kw.get('price_unit'),
+                            'price_extra': kw.get('price_extra')
+                        })
+                    if kw.get('description', False):
+                        line.write({
+                            'description': kw.get('description'),
+                        })
                     line._onchange_product_id()
+                    line._onchange_qty()
                 else:
                     product_id = request.env['product.product'].sudo().search([
                         ('id', '=', product_id)])
                     line_id = request.env['table.order.line'].sudo().create({
                         'product_id': product_id.id,
                         'qty': add_qty,
-                        'price_unit': product_id.lst_price,
+                        'price_unit': kw.get('price_unit', 0.0),
+                        'price_extra': kw.get('price_extra', 0.0),
                         'state': 'draft',
-                        'price_subtotal':0,
-                        'price_subtotal_incl':0, 
+                        'price_subtotal': 0,
+                        'price_subtotal_incl': 0,
+                        'description': kw.get('description'),
                         'note': kw.get('note'),
                     })
                     session_order.lines = [(4, line_id.id)]
                     line_id._onchange_product_id()
+                    line_id._onchange_qty()
                 session_order._onchange_amount_all()
         else:
-            table = request.env['restaurant.table'].sudo().search([('id', '=', int(table_id))])
-            product_id = request.env['product.product'].sudo().search([('id', '=', product_id)])
+            table = request.env['restaurant.table'].sudo().search(
+                [('id', '=', int(table_id))])
+            product_id = request.env['product.product'].sudo().search(
+                [('id', '=', product_id)])
             pos_session_id = request.env['pos.session'].sudo().search([
                 ('state', '=', 'opened')], limit=1)
             if not pos_session_id:
@@ -107,29 +127,32 @@ class TableBooking(http.Controller):
             pricelist_id = pos_session_id.config_id.pricelist_id
             if table:
                 lines = [(0, 0, {
-                    'product_id': product_id.id, 
-                    'qty': add_qty, 
-                    'price_unit': product_id.lst_price, 
+                    'product_id': product_id.id,
+                    'qty': add_qty,
+                    'price_unit': kw.get('price_unit', 0.0),
+                    'price_extra': kw.get('price_extra', 0.0),
+                    'description': kw.get('description', ''),
                     'state': 'draft',
-                    'price_subtotal':0,
-                    'price_subtotal_incl':0, 
+                    'price_subtotal': 0,
+                    'price_subtotal_incl': 0,
                     'note': kw.get('note')})]
                 new_order = request.env['table.order'].sudo().create({
-                    'table_id': table.id, 
-                    'is_table_order': True, 
-                    'active': False, 
-                    'amount_tax':0,
-                    'amount_total':0,
-                    'pricelist_id': pricelist_id.id, 
-                    'lines': lines })
+                    'table_id': table.id,
+                    'is_table_order': True,
+                    'active': False,
+                    'amount_tax': 0,
+                    'amount_total': 0,
+                    'pricelist_id': pricelist_id.id,
+                    'lines': lines})
                 if new_order and new_order.lines:
                     for line in new_order.lines:
                         line._onchange_product_id()
+                        line._onchange_qty()
                     new_order._onchange_amount_all()
                 request.session['sale_table_last_order_id'] = new_order.id
 
-        order = request.env['table.order'].sudo().search([
-            ('id', '=', request.session.get('sale_table_last_order_id')), ('active', '=', False)])
+        order = request.env['table.order'].sudo().search(
+            [('id', '=', request.session.get('sale_table_last_order_id')), ('active', '=', False)])
         if not order:
             order = request.env['table.order'].sudo().search([
                 ('id', '=', request.session.get('sale_table_last_order_id'))])
@@ -141,14 +164,17 @@ class TableBooking(http.Controller):
     @http.route(['/table/remove/order_line_json'], type='json', auth="public", methods=['POST'], website=True, csrf=False)
     def remove_order_line_table(self, line_id):
         if line_id:
-            order_line_id = request.env['table.order.line'].sudo().search([('id', '=', line_id)])
+            order_line_id = request.env['table.order.line'].sudo().search([
+                ('id', '=', line_id)])
             if order_line_id:
                 order_line_id.sudo().unlink()
                 if request.session.get('sale_table_last_order_id'):
                     order = None
-                    order = request.env['table.order'].sudo().search([('id', '=', request.session.get('sale_table_last_order_id')), ('active', '=', False)], limit=1)
+                    order = request.env['table.order'].sudo().search([('id', '=', request.session.get(
+                        'sale_table_last_order_id')), ('active', '=', False)], limit=1)
                     if not order:
-                        order = request.env['table.order'].sudo().search([('id', '=', request.session.get('sale_table_last_order_id'))], limit=1)
+                        order = request.env['table.order'].sudo().search(
+                            [('id', '=', request.session.get('sale_table_last_order_id'))], limit=1)
                     if order:
                         order._onchange_amount_all()
                         value = {}
@@ -157,23 +183,26 @@ class TableBooking(http.Controller):
                         })
                         return value
 
-    @http.route(['/confirm/table/order'], auth="public", website=True)
+    @http.route(['/confirm/table/order'], auth="public", website=True, sitemap=True)
     def confirm_table_order(self, **post):
         token = None
         order_res = None
         values = {}
         if request.session.get('sale_table_last_order_id'):
             order = None
-            order = request.env['table.order'].sudo().search([('id', '=', request.session.get('sale_table_last_order_id')), ('active', '=', False)])
+            order = request.env['table.order'].sudo().search(
+                [('id', '=', request.session.get('sale_table_last_order_id')), ('active', '=', False)])
             if not order:
-                order = request.env['table.order'].sudo().search([('id', '=', request.session.get('sale_table_last_order_id'))])
+                order = request.env['table.order'].sudo().search(
+                    [('id', '=', request.session.get('sale_table_last_order_id'))])
             if order:
                 order.active = True
                 order_res = order
                 if order.token:
                     token = order.token
                 else:
-                    order.token = request.env['ir.sequence'].sudo().next_by_code('table.order')
+                    order.token = request.env['ir.sequence'].sudo(
+                    ).next_by_code('table.order')
                 if order:
                     for line in order.lines:
                         if line.state == 'draft':
@@ -181,18 +210,21 @@ class TableBooking(http.Controller):
                 token = order.token
                 notifications = []
                 table_order_message = order.table_id.name + " Have new order."
-                user_ids = request.env['pos.session'].sudo().search([('state', '=', 'opened')]).mapped('user_id')
+                user_ids = request.env['pos.session'].sudo().search(
+                    [('state', '=', 'opened')]).mapped('user_id')
                 for user_id in user_ids.sudo():
                     vals = {
                         'user_id': user_id.id,
                         'table_order_message': table_order_message,
+                        'token':token
                     }
-                    notifications.append([user_id.partner_id, 'table.order', {'table_order_display': vals}])
+                    notifications.append([user_id.partner_id, 'table.order', {
+                                         'table_order_display': vals}])
                     request.env['bus.bus'].sudo()._sendmany(notifications)
                 values.update({
-                        'token': token,
-                        'order': order_res
-                        })
+                    'token': token,
+                    'order': order_res
+                })
         return request.render("qrcode_table.confirm_order_temp", values)
 
     def get_attribute_value_ids(self, pricelist, product):
@@ -203,28 +235,34 @@ class TableBooking(http.Controller):
         """
         # product attributes with at least two choices
         if not pricelist:
-            PosConfig = request.env['pos.config'].sudo().search([('active', '=', True)], limit=1)
+            PosConfig = request.env['pos.config'].sudo().search(
+                [('active', '=', True)], limit=1)
             pricelist = PosConfig.pricelist_id
         quantity = product._context.get('quantity') or 1
         product = product.with_context(quantity=quantity)
 
-        visible_attrs_ids = product.attribute_line_ids.filtered(lambda l: len(l.value_ids) > 1).mapped('attribute_id').ids
+        visible_attrs_ids = product.attribute_line_ids.filtered(
+            lambda l: len(l.value_ids) > 1).mapped('attribute_id').ids
         to_currency = pricelist.currency_id
         attribute_value_ids = []
         for variant in product.product_variant_ids:
             if to_currency != product.currency_id:
-                price = variant.currency_id.compute(variant.lst_price, to_currency) / quantity
+                price = variant.currency_id.compute(
+                    variant.lst_price, to_currency) / quantity
             else:
                 price = variant.lst_price / quantity
-            visible_attribute_ids = [v.id for v in variant.product_template_attribute_value_ids if v.attribute_id.id in visible_attrs_ids]
-            attribute_value_ids.append([variant.id, visible_attribute_ids, price, variant.list_price / quantity])
+            visible_attribute_ids = [
+                v.id for v in variant.product_template_attribute_value_ids if v.attribute_id.id in visible_attrs_ids]
+            attribute_value_ids.append(
+                [variant.id, visible_attribute_ids, price, variant.list_price / quantity])
         return attribute_value_ids
 
     @http.route(['/table/get/note'], type='json', auth="public", csrf=False)
     def table_get_note_json(self, order_line_id, **kw):
         values = {}
         if order_line_id:
-            order_line_id = request.env['table.order.line'].browse(order_line_id)
+            order_line_id = request.env['table.order.line'].browse(
+                order_line_id)
             values.update({'note': order_line_id.note,
                            'order_line_id': order_line_id.id})
         return values
@@ -233,7 +271,8 @@ class TableBooking(http.Controller):
     def table_update_note_json(self, order_line_id, note='', **kw):
         values = {}
         if order_line_id:
-            order_line_id = request.env['table.order.line'].browse(order_line_id)
+            order_line_id = request.env['table.order.line'].browse(
+                order_line_id)
             order_line_id.note = note
             values.update({'success': True,
                            'order_line_id': order_line_id.id})
@@ -246,7 +285,9 @@ class TableBooking(http.Controller):
         order = request.session.get('sale_table_last_order_id')
         if not order:
             return {}
-        order = request.env['table.order'].sudo().search([('id', '=', request.session.get('sale_table_last_order_id'))])
+        order = request.env['table.order'].sudo().search(
+            [('id', '=', request.session.get('sale_table_last_order_id'))])
         value = {}
-        value['qrcode_table.table_cart_lines'] = request.env['ir.ui.view']._render_template("qrcode_table.table_cart_lines", {'order': order})
+        value['qrcode_table.table_cart_lines'] = request.env['ir.ui.view']._render_template(
+            "qrcode_table.table_cart_lines", {'order': order})
         return value
