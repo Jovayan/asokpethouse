@@ -3,15 +3,13 @@
     <template id="badge_extra_price" name="Badge Extra Price">
         <!-- <t t-set="combination_info_variant" t-value="product._get_combination_info(value_id, pricelist=pricelist)"/> -->
         <span class="badge rounded-pill text-bg-light border" t-if="combination_info_variant['price_extra']">
-        <span class="sign_badge_price_extra" t-out="combination_info_variant['price_extra'] > 0 and '+' or '-'"/>
-        <span t-out="abs(combination_info_variant['price_extra'])" class="variant_price_extra text-muted fst-italic" style="white-space: nowrap;"
-            t-options='{
+            <span class="sign_badge_price_extra" t-out="combination_info_variant['price_extra'] > 0 and '+' or '-'" />
+            <span t-out="abs(combination_info_variant['price_extra'])" class="variant_price_extra text-muted fst-italic" style="white-space: nowrap;" t-options='{
                 "widget": "monetary",
                 "display_currency": (pricelist or product).currency_id
-            }'/>
+            }' />
         </span>
     </template>
-
     <template id="variants_tmp">
         <t t-set="attribute_value_ids" t-value="get_attribute_value_ids(False,product)" />
         <ul t-attf-class="list-unstyled js_add_cart_variants #{ul_class}" t-att-data-attribute_value_ids="json.dumps(attribute_value_ids)">
@@ -22,11 +20,11 @@
                         <t t-set="inc" t-value="0" />
                         <t t-foreach="variant_id.product_template_value_ids" t-as="value_id">
                             <li class="form-group js_attribute_value" style="margin: 0;">
-                                <t t-set="combination_info_variant" t-value="product._get_combination_info(value_id, pricelist=pricelist)"/>
+                                <t t-set="combination_info_variant" t-value="product._get_combination_info(value_id, pricelist=pricelist)" />
                                 <label class="control-label" style="margin: 0 20px;">
-                                    <input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None" t-att-checked="'checked' if not inc else None" t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)" t-att-value="value_id.id" style="vertical-align: top; margin-right: 10px;" t-att-data-extra_price="combination_info_variant['price_extra']" t-att-pro_att_name="value_id.name"/>
-                                    <span t-field="value_id.name"/>
-                                    <t t-call="qrcode_table.badge_extra_price"/>
+                                    <input type="radio" t-att-class="'js_variant_change' if variant_id.attribute_id.create_variant else None" t-att-checked="'checked' if not inc else None" t-att-name="'attribute-%s-%s' % (product.id, variant_id.attribute_id.id)" t-att-value="value_id.id" style="vertical-align: top; margin-right: 10px;" t-att-data-extra_price="combination_info_variant['price_extra']" t-att-pro_att_name="value_id.name" />
+                                    <span t-field="value_id.name" />
+                                    <t t-call="qrcode_table.badge_extra_price" />
                                 </label>
                             </li>
                             <t t-set="inc" t-value="inc+1" />
@@ -137,9 +135,9 @@
                                                     <textarea name="note" placeholder="Notes" class="form-control" id="notes"></textarea>
                                                 </div>
                                             </div>
-                                            <input type="hidden" name="product_price"/>
-                                            <input type="hidden" name="product_attribute_val_name"/>
-                                            <input type="hidden" name="price_extra" value="0"/>
+                                            <input type="hidden" name="product_price" />
+                                            <input type="hidden" name="product_attribute_val_name" />
+                                            <input type="hidden" name="price_extra" value="0" />
                                             <buttom id="add_to_cart" class="btn btn-primary btn-md mt8 js_check_product a-submit" t-att-table_id="table_obj.id">Add to Cart</buttom>
                                         </div>
                                     </form>
@@ -172,7 +170,8 @@
                                 <td>
                                     <t t-esc="line.product_id.sudo().with_context(display_default_code=False).display_name" />
                                     <t t-if="line.description">
-                                        (<t t-esc="line.description" />)
+                                        (
+                                        <t t-esc="line.description" />)
                                     </t>
                                 </td>
                                 <td>
@@ -236,7 +235,7 @@
                                         <div class="col-lg-3">
                                             <!-- Nav tabs -->
                                             <ul class="nav nav-pills flex-column">
-                                                <t t-foreach="cate_ids" t-as="cat_id">
+                                                <t t-foreach="sorted(cate_ids, key=lambda x: x.sequence)" t-as="cat_id">
                                                     <li class="nav-item">
                                                         <a t-attf-href="#pos_table_category_#{cat_id.id}" t-attf-class="nav-link text-left pt-2 pb-2 #{'active' if cat_id.id == active_cat_id.id else ''}" data-bs-toggle="tab">
                                                             <t t-esc="cat_id.name" />
