@@ -279,6 +279,8 @@ class TableOrderLine(models.Model):
          ('served', 'Served'), ('done', 'Done'), ('cancel', 'Canceled')], copy=False, default='draft')
     note = fields.Char('Note added by the Customer.')
     price_extra = fields.Float(string="Price Extra")
+    flag = fields.Boolean(string="flag", default=False)
+
 
     @api.depends('product_id', 'description')
     def _compute_table_order_line_name(self):

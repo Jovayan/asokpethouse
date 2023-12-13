@@ -3,10 +3,12 @@ odoo.define('qrcode_table.FloorScreenExtended', function(require) {
     const { Gui } = require('point_of_sale.Gui');
     const FloorScreen = require('pos_restaurant.FloorScreen');
     const Registries = require('point_of_sale.Registries');
+    var addedLineIds = [];
 
     const FloorScreenExtended = (FloorScreen) =>
         class extends FloorScreen {
             async onSelectTable(table) {
+                var actionsExecuted = [];
                 if (this.state.isEditMode) {
                     this.state.selectedTableId = table.id;
                 } else {
@@ -30,7 +32,8 @@ odoo.define('qrcode_table.FloorScreenExtended', function(require) {
                     var tableorder = await this.get_table_orders();
                     if (tableorder[0]) {
                         var self = this;
-                        var isexit = undefined
+                        var isexit = undefined;
+
                         var table = this.env.pos.tables_by_id[tableorder[0].table_id];
                         var orders = this.env.pos.orders.filter((order) => { return order.tableId == table.id && order.token == tableorder[0].token && !order.finalized });
                         if (orders.length > 0) {
@@ -46,16 +49,19 @@ odoo.define('qrcode_table.FloorScreenExtended', function(require) {
                                 if (line.state != 'cancel') {
                                     var product = self.env.pos.db.get_product_by_id(line.product_id);
                                     var is_line_exit = order.get_line_all_ready_exit(line.id);
-                                    if (!is_line_exit) {
+                                    var isLineAdded = addedLineIds.includes(line.id);
+                                    if (!isLineAdded && !is_line_exit) {
                                         order.add_product(product, { quantity: line.qty, merge: false, description: line.description, price_extra: line.price_extra, table_order_line_id: line.id });
                                         var od_line = order.get_selected_orderline();
                                         od_line.set_table_order_line_id(line.id);
                                         od_line.set_note(line.note);
+                                        addedLineIds.push(line.id);
+                                        actionsExecuted.push(true);
                                     }
                                 }
                             });
-                            await this.trigger('close-temp-screen');
                             order.save_to_db();
+                            await this.trigger('close-temp-screen');
                             // await this.env.pos._syncTableOrderToServer();
                         } else {
                             await this.env.pos.setTable(table, order.uid);
@@ -67,31 +73,37 @@ odoo.define('qrcode_table.FloorScreenExtended', function(require) {
                                 if (line.state != 'cancel') {
                                     var product = self.env.pos.db.get_product_by_id(line.product_id);
                                     var is_line_exit = order.get_line_all_ready_exit(line.id);
-                                    if (!is_line_exit) {
+                                    var isLineAdded = addedLineIds.includes(line.id);
+                                    if (!isLineAdded && !is_line_exit) {
                                         order.add_product(product, { quantity: line.qty, merge: false, description: line.description, price_extra: line.price_unit });
                                         var od_line = order.get_selected_orderline();
                                         od_line.set_table_order_line_id(line.id);
                                         od_line.set_note(line.note);
+                                        addedLineIds.push(line.id);
+                                        actionsExecuted.push(true);
                                     }
                                 }
                             });
+                            // order.save_to_db();
                             await this.trigger('close-temp-screen');
                             // await this.env.pos._syncTableOrderToServer();
                         }
-                        // const SubmitOrderButton = Registries.Component.get('SubmitOrderButton');
-                        // await SubmitOrderButton.prototype._onClick.apply(this, arguments);
-                        // order.save_to_db();
                         // if (tableorder[0]) {
-                        //     // await this.env.pos._syncTableOrderToServer();
-                        //     await this.rpc({
-                        //         model: 'table.order',
-                        //         method: 'change_table_prepare_order',
-                        //         args: [tableorder[0].token.id],
-                        //     });
+                        // await this.env.pos._syncTableOrderToServer();
+                        await this.rpc({
+                            model: 'table.order',
+                            method: 'change_table_prepare_order',
+                            args: [tableorder[0].token.id],
+                        });
                         // }
                     }
                 }
                 this.showScreen(order.get_screen_data().name);
+                if (actionsExecuted.includes(true)) {
+                    const SubmitOrderButton = Registries.Component.get('SubmitOrderButton');
+                    await SubmitOrderButton.prototype._onClick.apply(this, arguments);
+                    // order.save_to_db();
+                }
             }
 
             async get_table_orders() {
