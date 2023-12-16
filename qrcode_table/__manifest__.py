@@ -13,7 +13,7 @@
     'summary': 'This module is very useful for restaurant owners who want to automate food ordering at the convenience of customer sitting at a particular table. | Table Booking | Table QR Code | QRCODE | QR Code | Table QR Code | POS Table QR Code',
     "description": "Order from your table by scanning QR Code using your mobile.",
     "data": [
-        'security/ir.model.access.csv', 
+        'security/ir.model.access.csv',
         'data/data.xml',
         'views/views.xml',
         'views/template.xml',
