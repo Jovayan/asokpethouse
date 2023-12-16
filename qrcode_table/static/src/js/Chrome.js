@@ -47,14 +47,14 @@ odoo.define('qrcode_table.Chrome', function(require) {
                     var isexit = undefined;
                     var table = this.env.pos.tables_by_id[tableorder[0].table_id];
                     var orders = this.env.pos.orders.filter((order) => { return order.tableId == table.id && order.token == tableorder[0].token && !order.finalized });
+                    this.showScreen('ProductScreen');
+                    setTimeout(() => {
+                        this.showScreen('FloorScreen');
+                    }, 180);
                     if (orders.length > 0) {
                         order = orders[0];
                         isexit = order;
                         await this.env.pos.setTable(table, order.uid);
-                        this.showScreen('ProductScreen');
-                        setTimeout(() => {
-                            this.showScreen('FloorScreen');
-                        }, 200);
                     }
                     if (isexit != undefined) {
                         order = this.env.pos.get_order();
