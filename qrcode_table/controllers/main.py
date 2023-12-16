@@ -216,7 +216,8 @@ class TableBooking(http.Controller):
                     vals = {
                         'user_id': user_id.id,
                         'table_order_message': table_order_message,
-                        'token':token
+                        'token':token,
+                        'table_id':order.table_id.id,
                     }
                     notifications.append([user_id.partner_id, 'table.order', {
                                          'table_order_display': vals}])

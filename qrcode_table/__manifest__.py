@@ -43,7 +43,7 @@
             'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderLine.js',
             'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderPosLines.js',
             'qrcode_table/static/src/js/Screens/ProductScreen/ControlButtons/TableOrderButton.js',
-            'qrcode_table/static/src/js/Screens/FloorScreen/FloorScreenExtended.js',
+            # 'qrcode_table/static/src/js/Screens/FloorScreen/FloorScreenExtended.js',
             'qrcode_table/static/src/xml/Screens/ProductScreen/ControlButtons/TableOrderButton.xml',
             'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderList.xml',
             'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderLine.xml',

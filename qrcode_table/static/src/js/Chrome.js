@@ -31,29 +31,30 @@ odoo.define('qrcode_table.Chrome', function(require) {
                             },
                         });
                         n.show();
-                        if (this.env.pos.get_order()) {
-                            // if (this.env.pos.get_order().token == notif.payload['table_order_display']['token']) {
-                            await this.updateTableorder();
-                            // }
-                        }
+                        var table_id = notif.payload['table_order_display']['table_id'];
+                        var table_obj = posmodel.tables_by_id[table_id];
+                        await this.env.pos.setTable(table_obj);
+                        this.updateTableorder();
                     }
                 }
             }
             async updateTableorder() {
-                var table_id = await this.get_table_orders();
-                // if (this.env.pos.get_order().token == token) {
+                // var table_id = await this.get_table_orders();
+                var order = this.env.pos.get_order();
                 var tableorder = await this.get_table_orders();
                 if (tableorder[0]) {
                     var self = this;
                     var isexit = undefined;
-                    var order = this.env.pos.get_order();
-
                     var table = this.env.pos.tables_by_id[tableorder[0].table_id];
                     var orders = this.env.pos.orders.filter((order) => { return order.tableId == table.id && order.token == tableorder[0].token && !order.finalized });
                     if (orders.length > 0) {
                         order = orders[0];
                         isexit = order;
                         await this.env.pos.setTable(table, order.uid);
+                        this.showScreen('ProductScreen');
+                        setTimeout(() => {
+                            this.showScreen('FloorScreen');
+                        }, 200);
                     }
                     if (isexit != undefined) {
                         order = this.env.pos.get_order();
@@ -71,8 +72,8 @@ odoo.define('qrcode_table.Chrome', function(require) {
                                 }
                             }
                         });
-                        await this.trigger('close-temp-screen');
                         order.save_to_db();
+                        await this.trigger('close-temp-screen');
                         // await this.env.pos._syncTableOrderToServer();
                     } else {
                         await this.env.pos.setTable(table, order.uid);
@@ -85,7 +86,7 @@ odoo.define('qrcode_table.Chrome', function(require) {
                                 var product = self.env.pos.db.get_product_by_id(line.product_id);
                                 var is_line_exit = order.get_line_all_ready_exit(line.id);
                                 if (!is_line_exit) {
-                                    order.add_product(product, { quantity: line.qty, merge: false, description: line.description, price_extra: line.price_unit });
+                                    order.add_product(product, { quantity: line.qty, merge: false, description: line.description, price_extra: line.price_extra });
                                     var od_line = order.get_selected_orderline();
                                     od_line.set_table_order_line_id(line.id);
                                     od_line.set_note(line.note);
@@ -106,7 +107,6 @@ odoo.define('qrcode_table.Chrome', function(require) {
                             args: [tableorder[0].token.id],
                         });
                     }
-                    // }
                 }
             }
             async get_table_orders() {
