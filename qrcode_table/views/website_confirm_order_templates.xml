@@ -65,7 +65,10 @@
                                 <div class="card-body">
                                     <p class="card-text text-center" t-if="token">
                                         <h1 class="text-center">
-                                            <span class="text-success">Token: #
+                                            <span class="text-success" style="font-weight:bold;">Table Number :
+                                                <t t-esc="table_name"></t>
+                                            </span><br/>
+                                            <span class="text-success" style="font-size:30px;">Token: #
                                                 <t t-esc="token"></t>
                                             </span>
                                         </h1>

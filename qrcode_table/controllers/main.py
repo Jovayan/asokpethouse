@@ -224,7 +224,8 @@ class TableBooking(http.Controller):
                     request.env['bus.bus'].sudo()._sendmany(notifications)
                 values.update({
                     'token': token,
-                    'order': order_res
+                    'order': order_res,
+                    'table_name':order.table_id.name,
                 })
         return request.render("qrcode_table.confirm_order_temp", values)
 
