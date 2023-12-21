@@ -235,12 +235,14 @@
                                         <div class="col-lg-3">
                                             <!-- Nav tabs -->
                                             <ul class="nav nav-pills flex-column">
-                                                <t t-foreach="sorted(cate_ids, key=lambda x: x.sequence)" t-as="cat_id">
-                                                    <li class="nav-item">
-                                                        <a t-attf-href="#pos_table_category_#{cat_id.id}" t-attf-class="nav-link text-left pt-2 pb-2 #{'active' if cat_id.id == active_cat_id.id else ''}" data-bs-toggle="tab">
-                                                            <t t-esc="cat_id.name" />
-                                                        </a>
-                                                    </li>
+                                                <t t-if="cate_ids">
+                                                    <t t-foreach="sorted(cate_ids, key=lambda x: x.sequence)" t-as="cat_id">
+                                                        <li class="nav-item">
+                                                            <a t-attf-href="#pos_table_category_#{cat_id.id}" t-attf-class="nav-link text-left pt-2 pb-2 #{'active' if cat_id.id == active_cat_id.id else ''}" data-bs-toggle="tab">
+                                                                <t t-esc="cat_id.name" />
+                                                            </a>
+                                                        </li>
+                                                    </t>
                                                 </t>
                                             </ul>
                                         </div>

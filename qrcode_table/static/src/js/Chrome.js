@@ -1,6 +1,5 @@
 odoo.define('qrcode_table.Chrome', function(require) {
     'use strict';
-
     const Chrome = require('point_of_sale.Chrome');
     const Registries = require('point_of_sale.Registries');
     const PosTableChrome = (Chrome) =>
@@ -39,7 +38,6 @@ odoo.define('qrcode_table.Chrome', function(require) {
                 }
             }
             async updateTableorder() {
-                // var table_id = await this.get_table_orders();
                 var order = this.env.pos.get_order();
                 var tableorder = await this.get_table_orders();
                 if (tableorder[0]) {
@@ -51,7 +49,34 @@ odoo.define('qrcode_table.Chrome', function(require) {
                         this.showScreen('ProductScreen');
                         setTimeout(() => {
                             this.showScreen('FloorScreen');
-                        }, 190);
+                        }, 210);
+                    } else if (this.mainScreen.name == "TicketScreen") {
+                        this.showScreen('ProductScreen');
+                        setTimeout(() => {
+                            this.showScreen('FloorScreen');
+                            setTimeout(async () => {
+                                this.showScreen('TicketScreen');
+                            }, 250);
+                        }, 210);
+                    } else if (this.mainScreen.name == "PaymentScreen" && table.name != window.currentTableID.name) {
+                        this.showScreen('ProductScreen');
+                        setTimeout(async () => {
+                            this.showScreen('FloorScreen');
+                            setTimeout(async () => {
+                                await this.env.pos.setTable(window.currentTableID);
+                                this.showScreen('ProductScreen');
+                                this.showScreen('PaymentScreen');
+                            }, 250);
+                        }, 210);
+                    } else if (this.mainScreen.name != "FloorScreen" && this.mainScreen.name != "TicketScreen" && this.mainScreen.name != "PaymentScreen" && table.name != window.currentTableID.name) {
+                        this.showScreen('ProductScreen');
+                        setTimeout(async () => {
+                            this.showScreen('FloorScreen');
+                            setTimeout(async () => {
+                                await this.env.pos.setTable(window.currentTableID);
+                                this.showScreen('ProductScreen');
+                            }, 250);
+                        }, 210);
                     }
                     if (orders.length > 0) {
                         order = orders[0];
