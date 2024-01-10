@@ -7,17 +7,17 @@ odoo.define('qrcode_table.models', function(require) {
     const QrcodeTableOrder = (Order) => class QrcodeTableOrder extends Order {
         constructor(obj, options) {
             super(...arguments);
-            if(options.json && options.json.token){
+            if (options.json && options.json.token) {
                 this.is_table_order = options.json.is_table_order;
                 this.token = options.json.token;
-            }else{
+            } else {
                 this.is_table_order = false;
                 this.token = false;
             }
         }
         set_orderline_options(orderline, options) {
             super.set_orderline_options(...arguments);
-            if(options.table_order_line_id !== undefined){
+            if (options.table_order_line_id !== undefined) {
                 orderline.set_table_order_line_id(options.table_order_line_id);
             }
         }
@@ -55,6 +55,23 @@ odoo.define('qrcode_table.models', function(require) {
             super.init_from_JSON(...arguments);
             this.token = json.token;
         }
+        export_for_printing() {
+            const json = super.export_for_printing(...arguments);
+            if (this.pos.config.module_pos_restaurant) {
+                if (this.pos.config.iface_floorplan) {
+                    json.table = this.getTable().name;
+                    const hasMinimumSpendingProduct = this.orderlines.some(line => {
+                        const productName = line.product.display_name;
+                        return productName && productName.toLowerCase().includes("minimum spending");
+                    });
+                    if (hasMinimumSpendingProduct) {
+                        json.qr_image = this.getTable().qr_image;
+                    }
+                }
+                json.customer_count = this.getCustomerCount();
+            }
+            return json;
+        }
     }
     Registries.Model.extend(Order, QrcodeTableOrder);
 
@@ -63,10 +80,10 @@ odoo.define('qrcode_table.models', function(require) {
             super(...arguments);
             if (options.json && options.json.table_order_line_id) {
                 this.table_order_line_id = options.json.table_order_line_id;
-            }else{
+            } else {
                 this.table_order_line_id = this.table_order_line_id || 0;
             }
-            
+
         }
         set_table_order_line_id(table_order_line_id) {
             this.table_order_line_id = table_order_line_id;
@@ -83,7 +100,7 @@ odoo.define('qrcode_table.models', function(require) {
             super.init_from_JSON(...arguments);
             this.table_order_line_id = json.table_order_line_id;
         }
-        clone(){
+        clone() {
             var line = super.clone(...arguments);
             line.table_order_line_id = this.table_order_line_id;
             return line;

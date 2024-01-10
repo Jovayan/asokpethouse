@@ -31,6 +31,7 @@
             'qrcode_table/static/src/css/quickview.css',
             'qrcode_table/static/src/css/custom.css',
             'qrcode_table/static/src/js/custom.js',
+            'qrcode_table/static/src/js/theme.js',
         ],
         'point_of_sale.assets': [
             'qrcode_table/static/src/css/pos.css',
@@ -44,6 +45,7 @@
             'qrcode_table/static/src/js/Screens/ProductScreen/TableOrderPosLines.js',
             'qrcode_table/static/src/js/Screens/ProductScreen/ControlButtons/TableOrderButton.js',
             'qrcode_table/static/src/js/Screens/FloorScreen/FloorScreenExtended.js',
+            'qrcode_table/static/src/xml/OrderReceipt.xml',
             'qrcode_table/static/src/xml/Screens/ProductScreen/ControlButtons/TableOrderButton.xml',
             'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderList.xml',
             'qrcode_table/static/src/xml/Screens/ProductScreen/TableOrderLine.xml',

@@ -15,7 +15,9 @@
                 <t t-foreach="order.lines" t-as="line">
                     <tr>
                         <td align="center" t-if="line.product_id.product_tmpl_id" class='td-img'>
-                            <span t-field="line.product_id.image_128" t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_image_24_cover'}" />
+                            <t t-if="line.product_id.is_hide != true">
+                                <span t-field="line.product_id.image_128" t-options="{'widget': 'image', 'qweb_img_responsive': False, 'class': 'rounded o_image_24_cover'}" />
+                            </t>
                         </td>
                         <td t-if="line.product_id.product_tmpl_id" class='td-product_name'>
                             <div>
@@ -32,9 +34,9 @@
                                 <span t-esc="line.price_unit" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
                             </div>
                         </td>
-                         <td t-attf-class="text-center td-action #{'bg-danger' if line.state =='cancel' else 'bg-success'}">
+                        <td t-attf-class="text-center td-action #{'bg-danger' if line.state =='cancel' else 'bg-success'}">
                             <div>
-                                <strong class="text-center color-white"><span t-field="line.state"/></strong>
+                                <strong class="text-center color-white"><span t-field="line.state" /></strong>
                             </div>
                         </td>
                     </tr>
@@ -67,7 +69,7 @@
                                         <h1 class="text-center">
                                             <span class="text-success" style="font-weight:bold;">Table Number :
                                                 <t t-esc="table_name"></t>
-                                            </span><br/>
+                                            </span><br />
                                             <span class="text-success" style="font-size:30px;">Token: #
                                                 <t t-esc="token"></t>
                                             </span>
@@ -82,7 +84,7 @@
                                     </p>
                                 </div>
                             </div>
-                            <br/>
+                            <br />
                             <div class="text-center"> <a t-attf-href="/table/resume/#{slug(order)}" class="btn btn-success btn_table_resume_order">Resume Order</a> </div>
                         </div>
                         <div class="col-sm-6" t-if="order">

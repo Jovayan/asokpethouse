@@ -32,7 +32,7 @@ class ResConfigSettings(models.TransientModel):
         website_confirm_order_meesage = self.env['ir.config_parameter'].sudo(
         ).get_param('qrcode_table.website_confirm_order_meesage')
         res.update(
-            website_confirm_order_meesage=website_confirm_order_meesage,
+            website_confirm_order_meesage=website_confirm_order_meesage
         )
         return res
 

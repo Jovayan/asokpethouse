@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="qrcode_table.OrderReceiptQr" t-inherit="point_of_sale.OrderReceipt" t-inherit-mode="extension" owl="1">
+        <xpath expr="//div[hasclass('pos-receipt-contact')]" position="after">
+            <br />
+            <t t-if="receipt.table">
+                <t t-if="receipt.qr_image">
+                    <span class="pos-receipt-center-align">
+                        <img t-att-src="'data:image/png;base64,' + receipt.qr_image" class="pos-receipt-logo" style="min-width: 45%; min-height: 45%; object-fit: cover;" />
+                    </span>
+                </t>
+            </t>
+        </xpath>
+    </t>
+</templates>

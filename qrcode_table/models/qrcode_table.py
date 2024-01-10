@@ -15,6 +15,7 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     is_table_order = fields.Boolean(string="Is Table Order")
+    is_hide = fields.Boolean(string="Hide Image on Website")
     module_qrcode_table_theme = fields.Boolean(
         string="QRCode Table Theme Installed",
         compute="_compute_module_qrcode_table_theme",
@@ -175,7 +176,8 @@ class TableOrder(models.Model):
     @api.model
     def get_table_order_lists(self, table_id):
         # domain = [('is_table_order','=', True)]
-        domain = [('active', '=', True), ('is_table_order','=', True), ('state', '=', 'draft')]
+        domain = [('active', '=', True), ('is_table_order',
+                                          '=', True), ('state', '=', 'draft')]
         if table_id:
             domain += [('table_id', '=', table_id)]
         orders = self.search(domain)
@@ -281,7 +283,6 @@ class TableOrderLine(models.Model):
     price_extra = fields.Float(string="Price Extra")
     flag = fields.Boolean(string="flag", default=False)
 
-
     @api.depends('product_id', 'description')
     def _compute_table_order_line_name(self):
         for rec in self:
@@ -371,3 +372,18 @@ class Ir_Sequence(models.Model):
         sqno = self.env.ref('qrcode_table.seq_web_table_order')
         if sqno:
             sqno.write({'number_next': 1})
+
+
+class PosSession(models.Model):
+    _inherit = 'pos.session'
+
+    def _loader_params_restaurant_table(self):
+        return {
+            'search_params': {
+                'domain': [('active', '=', True)],
+                'fields': [
+                    'name', 'width', 'height', 'position_h', 'position_v',
+                    'shape', 'floor_id', 'color', 'seats', 'active', 'qr_image'
+                ],
+            },
+        }

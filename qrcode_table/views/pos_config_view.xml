@@ -13,7 +13,7 @@
                         </div>
                         <div class="o_setting_right_pane">
                             <label for="website_confirm_order_meesage" string="Website Confirm Order Message" />
-                            <field name="website_confirm_order_meesage" class="w-100"/>
+                            <field name="website_confirm_order_meesage" class="w-100" />
                         </div>
                     </div>
                 </div>
