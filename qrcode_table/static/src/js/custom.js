@@ -69,7 +69,7 @@ odoo.define('qrcode_table.custom', function(require) {
             var $ul = $(ev.target).closest('.js_add_cart_variants');
             var $parent = $ul.closest('.js_product');
             var $product_id = $parent.find('.product_id').first();
-            var $price = $parent.find(".oe_price:first .oe_currency_value");
+            var $price = $parent.find(".oe_price2:first .oe_currency_value");
             var $default_price = $parent.find(".oe_default_price:first .oe_currency_value");
             var $optional_price = $parent.find(".oe_optional:first .oe_currency_value");
             var variant_ids = $ul.data("attribute_value_ids");
@@ -189,7 +189,7 @@ odoo.define('qrcode_table.custom', function(require) {
             var price_unit = parseFloat($(event.currentTarget).closest('.quick-modal').find("input[name='product_price']").val());
             var price_extra = parseFloat($(event.currentTarget).closest('.quick-modal').find("input[name='price_extra']").val());
             if(isNaN(price_unit)){
-                price_unit = parseFloat($(event.currentTarget).closest('.quick-modal').find(".js_product .oe_price:first .oe_currency_value").text());
+                price_unit = parseFloat($(event.currentTarget).closest('.quick-modal').find(".js_product .oe_price2:first .oe_currency_value").text());
             }
             if(isNaN(price_extra)){
                 price_extra = parseFloat(0);

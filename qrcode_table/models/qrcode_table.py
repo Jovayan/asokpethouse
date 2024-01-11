@@ -22,6 +22,15 @@ class ProductTemplate(models.Model):
         store=False,
     )
 
+    tax_excluded_price = fields.Float(string='Tax Excluded Price', compute='_compute_tax_excluded_price', store=True)
+
+    @api.depends('list_price', 'taxes_id')
+    def _compute_tax_excluded_price(self):
+        for product in self:
+            taxes = product.taxes_id.compute_all(product.list_price, currency=False)
+            product.tax_excluded_price = taxes['total_excluded']
+
+
     @api.depends("module_qrcode_table_theme")
     def _compute_module_qrcode_table_theme(self):
         for record in self:

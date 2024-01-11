@@ -37,12 +37,13 @@
     <template id="product_price_temp">
         <div itemprop="offers" itemscope="itemscope" itemtype="http://schema.org/Offer" class="product_price mt16">
             <h4 class="oe_price_h4 css_editable_mode_hidden">
-                <b class="oe_price" style="white-space: nowrap;" t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
-                <span itemprop="price" style="display:none;" t-esc="product.list_price" />
+                <b class="oe_price" style="white-space: nowrap;" t-esc="product.tax_excluded_price" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
+                <b class="oe_price2" style="white-space: nowrap;display:none;" t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
+                <span itemprop="price" style="display:none;" t-esc="product.tax_excluded_price" />
                 <span itemprop="priceCurrency" style="display:none;" t-esc="res_company.currency_id.name" />
             </h4>
             <h4 class="css_non_editable_mode_hidden decimal_precision" t-att-data-precision="str(product.currency_id.decimal_places)">
-                <span t-field="product.list_price" t-options='{
+                <span t-field="product.tax_excluded_price" t-options='{
                        "widget": "monetary",
                        "display_currency": product.currency_id,
                    }' />
@@ -88,8 +89,7 @@
                         <div class="row">
                             <div class="col-md-5 col-md-offset-1">
                                 <a itemprop="url" href="">
-                                <t t-if="product.is_hide != true">
-                                    
+                                    <t t-if="product.is_hide != true">
                                         <img itemprop="image" class="img img-responsive quick-view-product" t-att-src="website.image_url(product, 'image_512')" t-att-alt="product.name" />
                                     </t>
                                 </a>
@@ -226,13 +226,13 @@
                     <div class="ant-space-item">
                         <div class="th_tb_header_menu" style="display: flex;justify-content: space-between;align-items: center;margin-left:25px;">
                             <div class="search_bar_table_order_items">
-                                <div class="icon-bg open_search_cl" style="border-radius: 50px;background: #699C9A;color: white;height: 40px;width: 40px;padding:8px;">
+                                <div class="icon-bg open_search_cl d-none" style="border-radius: 50px;background: #699C9A;color: white;height: 40px;width: 40px;padding:8px;">
                                     <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" color="#0a2240" height="20" width="20" xmlns="http://www.w3.org/2000/svg" style="color: white;">
                                         <path fill="none" stroke-miterlimit="10" stroke-width="32" d="M221.09 64a157.09 157.09 0 10157.09 157.09A157.1 157.1 0 00221.09 64z"></path>
                                         <path fill="none" stroke-linecap="round" stroke-miterlimit="10" stroke-width="32" d="M338.29 338.29L448 448"></path>
                                     </svg>
                                 </div>
-                                <form action="#" method="get" class="d-none" style="position: relative;">
+                                <form action="#" method="get" style="position: relative;">
                                     <input type="text" name="search" class="tbo_search_items form-control" placeholder=" Search Menu ..." style="border:2px solid #699C9A;width: 200px;padding-left: 39px;height: 40px;border-radius:30px;color: #999;" />
                                     <div class="icon-bg a-submit" style="border-radius: 50px;background: #699C9A;color: white;padding:8px;width: 40px;  width: 40px;position: absolute;top: 0;left: 0px;">
                                         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" color="#0a2240" height="20" width="20" xmlns="http://www.w3.org/2000/svg" style="color: white">
@@ -303,7 +303,7 @@
                                                                                             <t t-call="qrcode_table.quick_view_tempate" />
                                                                                         </div>
                                                                                         <div class="pricetext">
-                                                                                            <span t-esc="product.list_price" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
+                                                                                            <span t-esc="product.tax_excluded_price" t-options="{'widget': 'monetary', 'display_currency': res_company.currency_id}" />
                                                                                         </div>
                                                                                     </div>
                                                                                 </div>
