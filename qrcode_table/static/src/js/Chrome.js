@@ -59,38 +59,49 @@ odoo.define('qrcode_table.Chrome', function(require) {
                             }, 250);
                         }, 210);
                     } else if (this.mainScreen.name == "PaymentScreen" && table.name != window.currentTableID.name) {
-                        this.showScreen('ProductScreen');
-                        setTimeout(async () => {
-                            this.showScreen('FloorScreen');
-                            setTimeout(async () => {
-                                await this.env.pos.setTable(window.currentTableID);
-                                this.showScreen('ProductScreen');
-                                this.showScreen('PaymentScreen');
-                            }, 250);
-                        }, 210);
-                    } else if (this.mainScreen.name != "FloorScreen" && this.mainScreen.name != "TicketScreen" && this.mainScreen.name != "PaymentScreen" && table.name != window.currentTableID.name) {
-
                         this.showScreen('FloorScreen');
                         setTimeout(async () => {
                             this.showScreen('ProductScreen');
                             setTimeout(async () => {
-                                await this.env.pos.setTable(window.currentTableID);
-                                this.showScreen('ProductScreen');
-                            }, 250);
+                                this.showScreen('FloorScreen');
+                                setTimeout(async () => {
+                                    await this.env.pos.setTable(window.currentTableID);
+                                    this.showScreen('ProductScreen');
+                                    this.showScreen('PaymentScreen');
+                                }, 250);
+                            }, 225);
                         }, 210);
 
+                        // this.showScreen('ProductScreen');
                         // setTimeout(async () => {
                         //     this.showScreen('FloorScreen');
                         //     setTimeout(async () => {
+                        //         await this.env.pos.setTable(window.currentTableID);
                         //         this.showScreen('ProductScreen');
-                        //         setTimeout(async () => {
-                        //             // this.showScreen('FloorScreen');
-                        //             // setTimeout(async () => {
-                        //                 await this.env.pos.setTable(window.currentTableID);
-                        //                 this.showScreen('ProductScreen');
-                        //             // }, 270);
-                        //         }, 250);
-                        //     }, 230);
+                        //         this.showScreen('PaymentScreen');
+                        //     }, 250);
+                        // }, 210);
+
+                    } else if (this.mainScreen.name != "FloorScreen" && this.mainScreen.name != "TicketScreen" && this.mainScreen.name != "PaymentScreen" && table.name != window.currentTableID.name) {
+                        this.showScreen('FloorScreen');
+                        setTimeout(async () => {
+                            this.showScreen('ProductScreen');
+                            setTimeout(async () => {
+                                this.showScreen('FloorScreen');
+                                setTimeout(async () => {
+                                    await this.env.pos.setTable(window.currentTableID);
+                                    this.showScreen('ProductScreen');
+                                }, 250);
+                            }, 225);
+                        }, 210);
+
+                        // this.showScreen('ProductScreen');
+                        // setTimeout(async () => {
+                        //     this.showScreen('FloorScreen');
+                        //     setTimeout(async () => {
+                        //         await this.env.pos.setTable(window.currentTableID);
+                        //         this.showScreen('ProductScreen');
+                        //     }, 250);
                         // }, 210);
                     }
                     if (orders.length > 0) {
