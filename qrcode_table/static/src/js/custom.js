@@ -155,6 +155,11 @@ odoo.define('qrcode_table.custom', function(require) {
                 $product_attribute_val_name.val(pro_att_names.join(', '));
                 $product_attribute_val_name.trigger('change');  
             }
+            if(($(this).data('extra_price') == undefined))
+            {
+                $price_extra.val(0);
+                $price_extra.trigger('change');  
+            }
             if(extra_prices.length){
                 var prsum = extra_prices.reduce((a, b)=> a + b, 0);
                 $price_extra.val(prsum);

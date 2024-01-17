@@ -25,7 +25,7 @@
                         </td>
                         <td>
                             <t t-if="line.module_qrcode_table_theme == True">
-                                <t t-esc="(line.price_extra + line.price_unit) * line.qty" />
+                                <t t-esc="(line.price) * line.qty" />
                             </t>
                             <t t-else="">
                                 <t t-esc="line.price" />
