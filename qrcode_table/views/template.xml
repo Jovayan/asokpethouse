@@ -88,11 +88,11 @@
                     <div class="modal-body col-md-12">
                         <div class="row">
                             <div class="col-md-5 col-md-offset-1">
-                                <a itemprop="url" href="">
+                               <!--  <a itemprop="url" href="">
                                     <t t-if="product.is_hide != true">
                                         <img itemprop="image" class="img img-responsive quick-view-product" t-att-src="website.image_url(product, 'image_512')" t-att-alt="product.name" />
                                     </t>
-                                </a>
+                                </a> -->
                             </div>
                             <div class="col-md-5 col-md-offset-1">
                                 <div class="col-md-12 text-left">
